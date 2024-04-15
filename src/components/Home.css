@@ -1,0 +1,188 @@
+/* HomePage.css */
+.homepage {
+  font-family: Arial, sans-serif;
+}
+
+.centered-flexbox {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Take up the full viewport height */
+}
+
+.about-us-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 50%;
+  margin-right: 100px;
+}
+
+.about-us-buttons-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-us-scroll {
+  margin-top: 200px;
+  display: flex; /* Establishes a flex container */
+  align-items: center; /* Vertically centers the flex items */
+  justify-content: center; /* Horizontally centers the flex items in the container */
+}
+
+.about-us-scroll-link {
+  display: flex;
+  align-items: center; /* Aligns the text and the image vertically */
+  text-decoration: none; /* Removes the underline from the link */
+  color: inherit; /* Inherits the color from the parent element */
+  font-size: 18px; /* Sets the font size of the link text */
+}
+
+.about-us-scroll-link img {
+  margin-right: 10px;
+}
+
+.image-container {
+  position: relative;
+  top: -100px;
+}
+
+.large-image {
+  width: 90%; /* Or set a specific width */
+  border-radius: 20px; /* Adjust as necessary for rounded corners */
+}
+
+.small-image {
+  width: 50%; /* Or set a specific width */
+  border-radius: 10px; /* Adjust as necessary for rounded corners */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(
+    30%,
+    50%
+  ); /* Adjust translation values to overlap as needed */
+}
+
+/* How it works section */
+
+/* Flexbox wrapping the whole section - not reused in other sections */
+.Features-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flexbox wrapping the three text columns section - not reused in other sections */
+.features-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+/* Flexbox wrapping each text column section - not reused in other sections 
+   Styled to center texts, column flex, and margins
+*/
+.feature-textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin: 0 40px;
+  width: 20%;
+}
+
+/* texts in the text column section - not reused*/
+.feature-title {
+  font-size: 32px;
+  margin-bottom: 2px;
+}
+
+.feature-description {
+  font-size: 24px;
+}
+
+.title {
+  width: 50%;
+}
+
+.heading,
+.paragraph {
+  flex: 0 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.main-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.images img {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.main-image {
+  max-height: 300px; /* Adjust based on your design */
+  width: 50%;
+}
+
+.secondary-image {
+  max-height: 150px; /* Adjust based on your design */
+  position: relative;
+  top: -50px; /* Overlap images as in the design */
+}
