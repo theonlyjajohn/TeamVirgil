@@ -8,6 +8,7 @@
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh; /* Take up the full viewport height */
+  /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/
 }
 
 .about-us-flex-container {
@@ -128,15 +129,47 @@
   font-size: 24px;
 }
 
+.gradient-background {
+  background: linear-gradient(
+    to right,
+    #ff7e5f,
+    #feb47b
+  ); /* Gradient from pink to orange */
+  /* Define other properties like height and width as needed */
+}
+
 .header {
   background-color: #fff;
   padding: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, orange, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* for Safari */
+  font-size: "48px";
+}
+
+.colored-ellipse {
+  width: 30%; /* Adjust width as necessary */
+  height: 100%; /* Adjust height to maintain the aspect ratio of the ellipse */
+  background: radial-gradient(circle at center, #ffeaa7, #fff);
+  border-radius: 50%;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+
+.nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
 }
 
 .nav-item {
@@ -168,6 +201,14 @@
   font-weight: bold;
   margin-right: 10px;
   border-radius: 5px;
+}
+
+button.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .images img {

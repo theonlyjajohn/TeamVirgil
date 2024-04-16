@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import {
   Link,
   Button,
@@ -13,16 +13,34 @@ import childrenPlayingImage from "../images/children-playing.png";
 import downArrow from "../images/down-arrow.png";
 import leftMacbook from "../images/left.png";
 import rightMacbook from "../images/right.png";
+import grouped from "../images/grouped.png";
+import howItWorksElipse from "../images/how-it-works-elipse.png";
+import bigElipse from "../images/big-ellipse.png";
+import exploreDemo from "../images/our-demo.png";
 
 import "./Home.css"; // Assume you have corresponding CSS for styling
 
 function Home() {
+  const navigate = useNavigate();
+
+  const goToDemo = () => {
+    navigate("/demo");
+  };
   return (
     <div className="homepage">
       <header className="header">
         <nav className="navbar">
           <ul className="nav-list">
-            <li className="logo">Virgil</li>
+            <li
+              className="logo"
+              style={{
+                fontFamily: "Palatino Linotype, serif",
+                fontWeight: "bold",
+                fontSize: "32px",
+              }}
+            >
+              Virgil
+            </li>
             <Link to="about-us" className="nav-link">
               Our Product
             </Link>
@@ -40,8 +58,9 @@ function Home() {
           <div className="about-us-flex-container">
             <section className="about-us-text-container">
               <h1 style={{ fontSize: "48px" }}>
-                Preserve your legacy, <br />
-                One memory at a time.
+                Preserve your <span className="gradient-text">legacy</span>,{" "}
+                <br />
+                One <span className="gradient-text">memory</span> at a time.
               </h1>
               <p className="feature-description">
                 AI-powered biographies to capture and curate your loved one's
@@ -70,23 +89,26 @@ function Home() {
                 </Link>
               </div>
             </section>
+
             <div className="image-container">
-              <img
-                src={elderlyCoupleImage}
-                alt="Elderly couple"
-                className="large-image"
-              />
-              <img
-                src={childrenPlayingImage}
-                alt="Children playing"
-                className="small-image"
-              />
+              <img src={grouped} alt="Elderly couple" />
             </div>
           </div>
         </Element>
         <Element name="how-it-works" className="centered-flexbox">
           <div className="Features-section">
-            <h1 style={{ fontSize: "48px" }}>
+            <h1
+              //className="colored-ellipse"
+              style={{
+                fontSize: "48px",
+                backgroundImage: `url(${bigElipse})`,
+                backgroundSize: "contain", // Cover ensures the background covers the whole area
+                backgroundPosition: "center", // Center the image within the element
+                backgroundRepeat: "no-repeat", // The image will not tile
+                width: "100%",
+                height: "auto",
+              }}
+            >
               How Virgil captures <br></br>your family story
             </h1>
             <section className="features-container">
@@ -136,6 +158,7 @@ function Home() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              padding: "0",
             }}
           >
             <img src={leftMacbook} alt="leftMacbook" />
@@ -147,8 +170,17 @@ function Home() {
                 justifyContent: "center",
               }}
             >
-              <h1>Our Immersive Demo</h1>
-              <button className="cta-button">Try it out</button>
+              <h1 style={{ fontSize: "40px" }}>Our Immersive Demo</h1>
+              <button
+                className="cta-button"
+                onClick={goToDemo}
+                style={{
+                  backgroundColor: "transparent",
+                  fontSize: "16px",
+                }}
+              >
+                Try it out
+              </button>
             </div>
             <img src={rightMacbook} alt="rightMacbook" />
           </div>
