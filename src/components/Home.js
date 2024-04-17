@@ -146,6 +146,7 @@ function Home() {
                 backgroundRepeat: "no-repeat", // The image will not tile
                 width: "100%",
                 height: "auto",
+                marginBottom: "2%",
               }}
             >
               How Virgil captures <br></br>your family story

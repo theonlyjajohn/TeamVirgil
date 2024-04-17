@@ -4,6 +4,7 @@ import CarouselCard from "./CarouselCard";
 import MargaretThompson from "../images/margaret-thompson.png";
 import EarlyLife from "../images/early-life.png";
 import CollegeLife from "../images/college-life.png";
+import MargaretThompsonLarge from "../images/m-thompson-large.png";
 import CareerAndCommunity from "../images/career-and-community.png";
 
 import Carousel from "react-multi-carousel";
@@ -166,22 +167,24 @@ const Demo = () => {
         </nav>
       </header>
       <main className="main-content">
-        <div className="heading-container">
-          <div className="sub-heading"> The Story of </div>
-          <h1 className="main-heading"> Margaret Thompson</h1>
-        </div>
-        <div className="content-container">
-          <img
-            src={MargaretThompson}
-            alt="Black and white photo of Margaret Thompson"
-            style={{ width: "auto", height: "100%", objectFit: "cover" }}
-          />
-          <div className="content-text-container">
-            <p>
-              Maggie's life story is a testment to the impact one individual can
-              have on their community and family. Her dedication to education,
-              love for the arts, and commitment to community service left a
-              lasting legacy.
+        <div className="overall-heading-container">
+          <div className="heading-text-container">
+            <div className="heading-title-container">
+              <div className="sub-heading"> The Story of </div>
+              <h1 className="main-heading">
+                {" "}
+                Margaret <br></br>Thompson
+              </h1>
+            </div>
+            <div className="heading-content-container">
+              <p>
+                Maggie's life story is a testment to the impact one individual
+                can have on their community and family. Her dedication to
+                education, love for the arts, and commitment to community
+                service left a lasting legacy.
+              </p>
+              <br></br>
+
               <p>
                 <span style={{ fontWeight: "bold" }}>Born:</span> July 15, 1938
               </p>
@@ -196,57 +199,17 @@ const Demo = () => {
                 Proudly sponsored by Mary Thompson, with interviews by Lily
                 Jane.
               </p>
-            </p>
+            </div>
           </div>
+          <img
+            src={MargaretThompsonLarge}
+            alt="Black and white photo of Margaret Thompson"
+            style={{}}
+          />
         </div>
         <div className="life-chapters-container">
           <h1 style={{ marginBottom: "30px" }}>Life Chapters</h1>
 
-          {/* <div
-              style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}
-            >
-              <Carousel
-                ref={carouselRef}
-                swipeable={true}
-                draggable={false}
-                showDots={false}
-                responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
-                infinite={false}
-                autoPlaySpeed={1000}
-                keyBoardControl={true}
-                customTransition="all .5"
-                transitionDuration={500}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-                afterChange={(previousSlide, { currentSlide }) =>
-                  changeSlide(previousSlide, currentSlide, items.length)
-                }
-              >
-                {items.map((item, index) => {
-                  const isCenter = index === activeIndex;
-                  console.log(activeIndex);
-                  return (
-                    <div
-                      className={`item ${isCenter ? "center" : ""}`}
-                      key={item.id}
-                    >
-                      <CarouselCard
-                        years={item.years}
-                        imageUrl={item.imageUrl}
-                        title={item.title}
-                        items={item.features}
-                      />
-                      {isCenter && (
-                        <button className="learn-more">Learn More</button>
-                      )}
-                    </div>
-                  );
-                })}
-              </Carousel>
-            </div>*/}
           <div className="carousel-container">
             <div
               style={{
