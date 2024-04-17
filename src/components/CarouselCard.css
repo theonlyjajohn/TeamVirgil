@@ -45,10 +45,16 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: left;
+  text-align: left;
+  min-height: 150px;
+}
+
+.carousel-card-body-text {
+  display: flex;
+  flex-direction: column;
   align-items: left;
   text-align: left;
   margin-left: 10px;
-  min-height: 150px;
 }
 
 .bulleted::before {
@@ -57,4 +63,37 @@ h3 {
   margin-right: 8px; /* Adds space between the bullet and the text */
   color: black; /* Sets the color of the bullet, if needed */
   /* Other styles for positioning and size as needed */
+}
+
+.learn-more {
+  background-color: #ffde62;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  font-size: 16px;
+  border-color: transparent;
+  width: 80%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.learn-more::after {
+  content: ">"; /* Caret symbol */
+  color: #000; /* Black caret */
+  font-size: 1.5em; /* Slightly larger caret */
+  position: absolute; /* Absolute positioning inside the button */
+  right: 15px; /* Positioned to the far right inside the button */
+  top: 50%; /* Align vertically */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.learn-more:hover {
+  background-color: #eccb54; /* Slightly darker yellow on hover */
+}
+
+.button-container {
+  width: 100%; /* Take the full width to allow centering inside */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
