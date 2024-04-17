@@ -1,3 +1,60 @@
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
+
+.life-chapters-container {
+  margin: 50px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+
+.nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+/* TestDemo.css */
+.item.center {
+  transform: scale(1.1); /* Make the center item larger */
+  transition: transform 0.5s ease;
+  z-index: 10; /* Ensure it sits above other slides */
+}
+
+.carousel-container .slick-slide {
+  transition: transform 0.5s ease;
+  margin-top: 30px;
+  margin-bottom: 30px; /* Adjust as needed */
+}
+
+.slide-slider {
+  height: auto;
+}
+
+.learn-more {
+  display: none; /* Hide button by default */
+  margin-top: 10px;
+}
+
+.item.center .learn-more {
+  display: block; /* Only display button in the center slide */
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
@@ -38,7 +95,7 @@ h1 {
   flex-direction: column;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  background-color: #d9d9d9;
+  background-color: #ffefb5;
   width: 100%;
   padding: 100px;
 }
@@ -53,4 +110,22 @@ h1 {
 .sub-heading {
   font-family: "Poppins", sans-serif;
   font-size: 32px;
+}
+
+.testing {
+  color: yellow;
+  content: ">"; /* Caret symbol */
+}
+
+/* Additional styling for arrow containers if needed */
+.slick-prev,
+.slick-next {
+  background-color: transparent; /* Example to remove any background styling */
+  /* Other styles as necessary */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important; /* Choose the color you want for the arrows */
+  font-size: 40px !important;
 }

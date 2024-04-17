@@ -3,7 +3,6 @@ import "./CarouselCard.css"; // Assume you have corresponding CSS for styling
 
 function CarouselCard({ years, imageUrl, title, items, isCenter }) {
   const hasItems = items && items.length > 0;
-  console.log(hasItems);
 
   const cardClass = `carousel-card ${!hasItems ? "border-transparent" : ""}`;
 
@@ -16,15 +15,17 @@ function CarouselCard({ years, imageUrl, title, items, isCenter }) {
         <img src={imageUrl} alt={title} />
       </div>
       <div className="carousel-card-body">
-        <h3>{title}</h3>
-        {items.map((item, index) => (
-          <p key={index} className="bulleted">
-            {item}
-          </p> // Add a key here for each item
-        ))}
-        {isCenter && (
-          <button className="learn-more">Learn More</button> // This button will only render if isCenter is true
-        )}
+        <div className="carousel-card-body-text">
+          <h3>{title}</h3>
+          {items.map((item, index) => (
+            <p key={index} className="bulleted">
+              {item}
+            </p> // Add a key here for each item
+          ))}
+        </div>
+        <div className="button-container">
+          {isCenter && <button className="learn-more">Learn More</button>}
+        </div>
       </div>
     </div>
   );

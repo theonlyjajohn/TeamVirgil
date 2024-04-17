@@ -34,7 +34,7 @@ function Home() {
   const [email, setEmail] = useState("");
 
   const goToDemo = () => {
-    navigate("/testdemo");
+    navigate("/demo");
   };
 
   const goToHome = () => {
