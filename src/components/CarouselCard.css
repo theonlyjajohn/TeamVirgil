@@ -27,6 +27,10 @@
   /* Add more styles as needed */
 }
 
+.border-transparent {
+  border: transparent;
+}
+
 .carousel-card-image img {
   width: auto; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import CarouselCard from "./CarouselCard";
 import {
@@ -13,6 +13,7 @@ import MargaretThompson from "../images/margaret-thompson.png";
 import EarlyLife from "../images/early-life.png";
 import CollegeLife from "../images/college-life.png";
 import CareerAndCommunity from "../images/career-and-community.png";
+import { getOriginalCounterPart } from "react-multi-carousel/lib/utils";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -28,10 +29,26 @@ const TestDemo = () => {
     navigate("/home");
   };
 
+  const carouselRef = useRef();
+
+  const handleAfterChange = (currentSlideIndex) => {
+    if (carouselRef.current) {
+      // const newIndex = getOriginalCounterPart(index, carouselEl.current.state, carouselEl.current.props.children) // get the new index back after clone
+
+      const originalSlideIndex = getOriginalCounterPart(
+        currentSlideIndex,
+        carouselRef.current.state.slidesToShow,
+        carouselRef.current.state.currentSlide
+      );
+      console.log(originalSlideIndex);
+      setActiveIndex(originalSlideIndex);
+    }
+  };
+
   const settings = {
     className: "center",
     centerMode: true,
-    infinite: true,
+    infinite: false,
     centerPadding: "60px",
     slidesToShow: 3,
     dots: true,
@@ -40,6 +57,13 @@ const TestDemo = () => {
   };
 
   const items = [
+    {
+      id: 0,
+      imageUrl: "",
+      years: "",
+      title: "",
+      features: [],
+    },
     {
       id: 1,
       imageUrl: EarlyLife,
@@ -64,6 +88,13 @@ const TestDemo = () => {
       years: "1961-1970",
       title: "Career & Community",
       features: ["Teaching high school", "Volunteering with gardening"],
+    },
+    {
+      id: 4,
+      imageUrl: "",
+      years: "",
+      title: "",
+      features: [],
     },
   ];
 
@@ -169,12 +200,13 @@ const TestDemo = () => {
               style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}
             >
               <Carousel
+                ref={carouselRef}
                 swipeable={true}
                 draggable={false}
                 showDots={false}
                 responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
-                infinite={true}
+                infinite={false}
                 autoPlaySpeed={1000}
                 keyBoardControl={true}
                 customTransition="all .5"
@@ -183,14 +215,11 @@ const TestDemo = () => {
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
-                afterChange={(currSlide) => {
-                  console.log("Active index after change:", currSlide);
-                  setActiveIndex(currSlide);
-                }}
+                afterChange={handleAfterChange}
               >
                 {items.map((item, index) => {
                   const isCenter = index === activeIndex;
-                  console.log(index);
+                  console.log(activeIndex);
                   return (
                     <div
                       className={`item ${isCenter ? "center" : ""}`}
@@ -202,7 +231,9 @@ const TestDemo = () => {
                         title={item.title}
                         items={item.features}
                       />
-                      {/*isCenter && <button className="learn-more">Learn More</button>*/}
+                      {isCenter && (
+                        <button className="learn-more">Learn More</button>
+                      )}
                     </div>
                   );
                 })}

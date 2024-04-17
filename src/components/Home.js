@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Link,
@@ -22,6 +22,7 @@ import "./Home.css"; // Assume you have corresponding CSS for styling
 
 function Home() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
 
   const goToDemo = () => {
     navigate("/testdemo");
@@ -29,6 +30,16 @@ function Home() {
 
   const goToHome = () => {
     navigate("/home");
+  };
+
+  const handleChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // access email like the line below
+    alert(`An email was submitted: ${email}`);
   };
 
   return (
@@ -190,6 +201,31 @@ function Home() {
               </button>
             </div>
             <img src={rightMacbook} alt="rightMacbook" />
+          </div>
+        </Element>
+        <Element name="join-our-waitlist" className="centered-flexbox">
+          <div className="Features-section">
+            <h1
+              //className="colored-ellipse"
+              style={{
+                fontSize: "48px",
+                backgroundImage: `url(${bigElipse})`,
+                backgroundSize: "contain", // Cover ensures the background covers the whole area
+                backgroundPosition: "center", // Center the image within the element
+                backgroundRepeat: "no-repeat", // The image will not tile
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              Join our waitlist!
+            </h1>
+            <form onSubmit={handleSubmit}>
+              <label>
+                Email:
+                <input type="email" value={email} onChange={handleChange} />
+              </label>
+              <input type="submit" value="Submit" />
+            </form>
           </div>
         </Element>
       </main>
