@@ -1,0 +1,30 @@
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
+
+.life-chapters-container {
+  margin: 50px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+
+.nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}

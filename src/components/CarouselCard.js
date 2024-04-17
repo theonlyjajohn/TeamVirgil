@@ -1,4 +1,5 @@
 import React from "react";
+import "./CarouselCard.css"; // Assume you have corresponding CSS for styling
 
 function CarouselCard({ years, imageUrl, title, items }) {
   return (
@@ -11,11 +12,9 @@ function CarouselCard({ years, imageUrl, title, items }) {
       </div>
       <div className="carousel-card-body">
         <h3>{title}</h3>
-        <ul>
-          {items.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        {items.map((item) => (
+          <p class="bulleted"> {item} </p>
+        ))}
       </div>
     </div>
   );

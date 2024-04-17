@@ -24,23 +24,30 @@ function Home() {
   const navigate = useNavigate();
 
   const goToDemo = () => {
-    navigate("/demo");
+    navigate("/testdemo");
   };
+
+  const goToHome = () => {
+    navigate("/home");
+  };
+
   return (
     <div className="homepage">
       <header className="header">
         <nav className="navbar">
           <ul className="nav-list">
-            <li
-              className="logo"
+            <button
+              onClick={goToHome}
               style={{
                 fontFamily: "Palatino Linotype, serif",
                 fontWeight: "bold",
                 fontSize: "32px",
+                border: "transparent",
+                backgroundColor: "transparent",
               }}
             >
               Virgil
-            </li>
+            </button>
             <Link to="about-us" className="nav-link">
               Our Product
             </Link>
@@ -157,7 +164,7 @@ function Home() {
               width: "80%",
               display: "flex",
               alignItems: "center",
-              justifyContent: "center",
+              justifyContent: "space-between",
               padding: "0",
             }}
           >
