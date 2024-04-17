@@ -36,13 +36,26 @@ const TestDemo = () => {
       // const newIndex = getOriginalCounterPart(index, carouselEl.current.state, carouselEl.current.props.children) // get the new index back after clone
 
       const originalSlideIndex = getOriginalCounterPart(
-        currentSlideIndex,
-        carouselRef.current.state.slidesToShow,
+        carouselRef.current.state.currentSlide,
+        carouselRef.current.state,
         carouselRef.current.state.currentSlide
       );
       console.log(originalSlideIndex);
       setActiveIndex(originalSlideIndex);
     }
+  };
+
+  const changeSlide = (previousSlide, currentSlide, dataSize) => {
+    let activeSlide = 0;
+    // right arrow
+    if (previousSlide < currentSlide)
+      activeSlide = currentSlide - 2 === dataSize ? 0 : currentSlide - 2;
+    // left arrow
+    else
+      activeSlide =
+        currentSlide +
+        (currentSlide <= dataSize && currentSlide >= 2 ? -2 : dataSize - 2);
+    setActiveIndex(activeSlide);
   };
 
   const settings = {
@@ -215,7 +228,9 @@ const TestDemo = () => {
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
-                afterChange={handleAfterChange}
+                afterChange={(previousSlide, { currentSlide }) =>
+                  changeSlide(previousSlide, currentSlide, items.length)
+                }
               >
                 {items.map((item, index) => {
                   const isCenter = index === activeIndex;
