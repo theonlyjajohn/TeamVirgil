@@ -9,8 +9,8 @@ import {
   scrollSpy,
 } from "react-scroll";
 
-import { firestore } from "../firebase";
-import { addDoc, collection} from "@firebase/firestore";
+//import { firestore } from "../firebase";
+//import { addDoc, collection} from "@firebase/firestore";
 // import { addDoc, collection } from "firebase/firestore";
 
 import elderlyCoupleImage from "../images/elderly-couple.png";
@@ -26,10 +26,9 @@ import exploreDemo from "../images/our-demo.png";
 import "./Home.css"; // Assume you have corresponding CSS for styling
 
 function Home() {
-  // 
-  const ref = collection(firestore, "email_addresses");
-  // 
-
+  //
+  //const ref = collection(firestore, "email_addresses");
+  //
 
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -50,7 +49,7 @@ function Home() {
     event.preventDefault();
     // access email like the line below
     console.log(email);
-
+    /*
     let data = {
       message: email
     } 
@@ -59,9 +58,7 @@ function Home() {
       addDoc(ref, data)
     } catch (event) {
       console.log(event)
-    }
-    
-
+    }*/
 
     alert(`An email was submitted: ${email}`);
   };

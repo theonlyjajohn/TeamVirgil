@@ -58,15 +58,40 @@ const TestDemo = () => {
     setActiveIndex(activeSlide);
   };
 
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
+
   const settings = {
     className: "center",
+    initialSlide: 1,
     centerMode: true,
     infinite: false,
     centerPadding: "60px",
     slidesToShow: 3,
-    dots: true,
     speed: 500,
-    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    beforeChange: (current, next) => setActiveIndex(next), // Update active index on slide change
   };
 
   const items = [
@@ -104,6 +129,13 @@ const TestDemo = () => {
     },
     {
       id: 4,
+      imageUrl: "",
+      years: "",
+      title: "",
+      features: [],
+    },
+    {
+      id: 0,
       imageUrl: "",
       years: "",
       title: "",
@@ -209,7 +241,8 @@ const TestDemo = () => {
         <div className="life-chapters-container">
           <h1 style={{ marginBottom: "30px" }}>Life Chapters</h1>
           <div className="carousel-container">
-            <div
+            {" "}
+            {/* <div
               style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}
             >
               <Carousel
@@ -253,6 +286,33 @@ const TestDemo = () => {
                   );
                 })}
               </Carousel>
+            </div>*/}
+          </div>
+          <div className="carousel-container">
+            <div
+              style={{ width: "80%", marginLeft: "auto", marginRight: "auto" }}
+            >
+              <Slider {...settings}>
+                {items.map((item, index) => {
+                  const isCenter = index === activeIndex; // Determine if this slide is the center slide
+                  return (
+                    <div
+                      className={`item ${isCenter ? "center" : ""}`}
+                      key={item.id}
+                    >
+                      <CarouselCard
+                        years={item.years}
+                        imageUrl={item.imageUrl}
+                        title={item.title}
+                        items={item.features}
+                      />
+                      {isCenter && (
+                        <button className="learn-more">Learn More</button>
+                      )}
+                    </div>
+                  );
+                })}
+              </Slider>
             </div>
           </div>
         </div>
