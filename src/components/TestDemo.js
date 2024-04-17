@@ -305,10 +305,8 @@ const TestDemo = () => {
                         imageUrl={item.imageUrl}
                         title={item.title}
                         items={item.features}
+                        isCenter={isCenter}
                       />
-                      {isCenter && (
-                        <button className="learn-more">Learn More</button>
-                      )}
                     </div>
                   );
                 })}

@@ -28,3 +28,23 @@
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
 }
+
+/* TestDemo.css */
+.item.center {
+  transform: scale(1.1); /* Make the center item larger */
+  transition: transform 0.5s ease;
+  z-index: 10; /* Ensure it sits above other slides */
+}
+
+.carousel-container .slick-slide {
+  transition: transform 0.5s ease;
+}
+
+.learn-more {
+  display: none; /* Hide button by default */
+  margin-top: 10px;
+}
+
+.item.center .learn-more {
+  display: block; /* Only display button in the center slide */
+}
