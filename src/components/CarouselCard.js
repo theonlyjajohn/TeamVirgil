@@ -1,7 +1,7 @@
 import React from "react";
 import "./CarouselCard.css"; // Assume you have corresponding CSS for styling
 
-function CarouselCard({ years, imageUrl, title, items }) {
+function CarouselCard({ years, imageUrl, title, items, isCenter }) {
   const hasItems = items && items.length > 0;
   console.log(hasItems);
 
@@ -22,6 +22,9 @@ function CarouselCard({ years, imageUrl, title, items }) {
             {item}
           </p> // Add a key here for each item
         ))}
+        {isCenter && (
+          <button className="learn-more">Learn More</button> // This button will only render if isCenter is true
+        )}
       </div>
     </div>
   );
