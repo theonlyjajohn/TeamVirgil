@@ -6,14 +6,11 @@ import EarlyLife from "../images/early-life.png";
 import CollegeLife from "../images/college-life.png";
 import CareerAndCommunity from "../images/career-and-community.png";
 
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Demo.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Demo = () => {
   const navigate = useNavigate();

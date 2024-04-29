@@ -13,23 +13,15 @@ import {
 //import { addDoc, collection} from "@firebase/firestore";
 // import { addDoc, collection } from "firebase/firestore";
 
-import elderlyCoupleImage from "../images/elderly-couple.png";
-import childrenPlayingImage from "../images/children-playing.png";
 import downArrow from "../images/down-arrow.png";
 import leftMacbook from "../images/left.png";
 import rightMacbook from "../images/right.png";
 import grouped from "../images/grouped.png";
-import howItWorksElipse from "../images/how-it-works-elipse.png";
 import bigElipse from "../images/big-ellipse.png";
-import exploreDemo from "../images/our-demo.png";
 
 import "./Home.css"; // Assume you have corresponding CSS for styling
 
 function Home() {
-  //
-  //const ref = collection(firestore, "email_addresses");
-  //
-
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
 
