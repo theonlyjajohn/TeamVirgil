@@ -24,6 +24,10 @@ import "./Home.css"; // Assume you have corresponding CSS for styling
 function Home() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [subject, setSubject] = useState("");
+  const [motivation, setMotivation] = useState("");
 
   const goToDemo = () => {
     navigate("/demo");
@@ -33,8 +37,23 @@ function Home() {
     navigate("/home");
   };
 
-  const handleChange = (event) => {
+  const handleChangeEmail = (event) => {
     setEmail(event.target.value);
+  };
+
+  const handleChangeName = (event) => {
+    setFullName(event.target.value);
+  };
+
+  const handleChangeNumber = (event) => {
+    setPhoneNumber(event.target.value);
+  };
+
+  const handleChangeSubject = (event) => {
+    setSubject(event.target.value);
+  };
+  const handleChangeMotivation = (event) => {
+    setMotivation(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -138,6 +157,7 @@ function Home() {
                 backgroundRepeat: "no-repeat", // The image will not tile
                 width: "100%",
                 height: "auto",
+                marginBottom: "2%",
               }}
             >
               How Virgil captures <br></br>your family story
@@ -234,9 +254,48 @@ function Home() {
             </h1>
             <form onSubmit={handleSubmit}>
               <label>
-                Email:
-                <input type="email" value={email} onChange={handleChange} />
+                Full Name:
+                <input
+                  type="name"
+                  value={fullName}
+                  onChange={handleChangeName}
+                />
               </label>
+              <label>
+                Email:
+                <input
+                  type="email"
+                  value={email}
+                  onChange={handleChangeEmail}
+                />
+              </label>
+              <label>
+                Phone Number:
+                <input
+                  type="phone"
+                  value={phoneNumber}
+                  onChange={handleChangeNumber}
+                />
+              </label>
+              <label>
+                Whose story would you like to capture?
+                {/** make default value blank*/}
+                <select>
+                  <option selected value=""></option>
+                  <option value="grapefruit">Grapefruit</option>
+                  <option value="lime">Lime</option>
+                  <option value="mango">Mango</option>
+                </select>
+              </label>
+              <label>
+                Why are you interested in capturing their story?
+                <input
+                  type="motivation"
+                  value={motivation}
+                  onChange={handleChangeMotivation}
+                />
+              </label>
+
               <input type="submit" value="Submit" />
             </form>
           </div>
