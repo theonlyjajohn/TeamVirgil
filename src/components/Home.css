@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  height: 100vh; /* Take up the full viewport height */
+  min-height: 100vh; /* Take up the full viewport height */
   /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/
 }
 
@@ -86,9 +86,9 @@
 /* Flexbox wrapping the three text columns section - not reused in other sections */
 .features-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   width: 90%;
   margin: auto;
 }
@@ -98,12 +98,18 @@
 */
 .feature-textbox {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   text-align: left;
-  margin: 0 40px;
-  width: 25%;
+  margin-bottom: 40px;
+  width: 80%;
+}
+
+.feature-explanation {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }
 
 /* texts in the text column section - not reused*/
@@ -159,12 +165,23 @@
   border-radius: 50%;
 }
 
+.nav-bar-container {
+  display: flex;
+  flex-direction: column;
+}
 .nav-list {
   list-style: none;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  width: 40%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding as needed */
 }
 
 .nav-link {
@@ -226,4 +243,163 @@ button.cta-button {
   max-height: 150px; /* Adjust based on your design */
   position: relative;
   top: -50px; /* Overlap images as in the design */
+}
+
+.virgil-vault,
+.waitlist-form-container {
+  max-width: 570px;
+  padding: 20px;
+  margin: 20px;
+  text-align: left;
+  border: 2px solid rgb(222, 218, 218);
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.resized-image {
+  width: 40%; /* Set the width to 50% of its parent container */
+  height: auto; /* Height is set to auto to maintain aspect ratio */
+}
+
+.virgil-vault-header h1,
+.waitlist-form-header h1 {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.virgil-vault-header {
+  text-align: left;
+}
+
+.virgil-vault-includes {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.virgil-vault-includes h3 {
+  margin-bottom: 10px;
+}
+
+.virgil-vault-includes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bulleted::before {
+  content: "• "; /* This is a bullet point character */
+  /* You can add more styling as needed, such as margin or color */
+  margin-right: 8px; /* Adds space between the bullet and the text */
+  color: black; /* Sets the color of the bullet, if needed */
+  /* Other styles for positioning and size as needed */
+}
+
+.virgil-vault-includes p {
+  /*background: url("checkmark-icon.png") no-repeat left center; /* Path to checkmark icon */
+  padding-left: 30px; /* Adjust according to icon size */
+  background-size: 20px; /* Size of the checkmark icon */
+  margin-bottom: 10px;
+}
+
+.waitlist-form-header h1 {
+  color: #000;
+  font-size: 24px;
+}
+
+.waitlist-form-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.waitlist-form label {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+}
+
+.waitlist-form input,
+.waitlist-form select,
+.waitlist-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.waitlist-form textarea {
+  resize: none; /* Prevents resizing of textarea */
+}
+
+.waitlist-button {
+  width: 100%;
+  background-color: #ffde62; /* Orange color for the button */
+  color: black;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  padding: 15px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link-waitlist {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  background-color: #ffde62; /* Orange color for the button */
+  color: black;
+  padding: 15px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.waitlist-button:hover,
+.nav-link-waitlist:hover {
+  background-color: #cc8400; /* Darker shade for hover effect */
+}
+
+.waitlist-holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.virgil-vault-includes {
+  font-family: "Open Sans", sans-serif;
+}
+
+li {
+  font-family: "Open Sans", sans-serif;
+}
+
+.virgil-vault-includes li::before {
+  content: "✔";
+  margin-right: 5px;
+  color: #000; /* Changed to white to be visible on the gradient background */
+}
+
+.number-circle {
+  background-image: radial-gradient(
+    circle,
+    #fc8703 0%,
+    #feca50 30%,
+    #ffde62 50%
+  );
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
