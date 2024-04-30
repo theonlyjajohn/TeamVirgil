@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Demo.css";
 
-const Demo = () => {
+const CollegeYears = () => {
   const headingRef = useRef(null);
 
   const navigate = useNavigate();
@@ -36,18 +36,6 @@ const Demo = () => {
         hello
       </div>
     );
-  };
-
-  const goToEarlyLife = () => {
-    navigate("/early-life");
-  };
-
-  const goToCollegeYears = () => {
-    navigate("/college-years");
-  };
-
-  const goToCareerCommunity = () => {
-    navigate("/career-community");
   };
 
   const styling = {
@@ -81,7 +69,6 @@ const Demo = () => {
       years: "1938-1956",
       title: "Early Life in Ithaca",
       features: ["My brother", "Playing in the woods", "Family values"],
-      goto: goToEarlyLife,
     },
     {
       id: 2,
@@ -93,7 +80,6 @@ const Demo = () => {
         "Sorority life",
         "First relationship",
       ],
-      goto: goToCollegeYears,
     },
     {
       id: 3,
@@ -101,7 +87,6 @@ const Demo = () => {
       years: "1961-1970",
       title: "Career & Community",
       features: ["Teaching high school", "Volunteering with gardening"],
-      goto: goToCareerCommunity,
     },
     {
       id: 4,
@@ -189,11 +174,8 @@ const Demo = () => {
         <div className="overall-heading-container">
           <div className="heading-text-container">
             <div className="heading-title-container">
-              <div className="sub-heading"> The Story of </div>
-              <h1 className="main-heading">
-                {" "}
-                Margaret <br></br>Thompson
-              </h1>
+              <div className="sub-heading"> Maragaret Thompson </div>
+              <h1 className="main-heading"> Early life in new york</h1>
             </div>
             <div className="heading-content-container">
               <p>
@@ -220,49 +202,10 @@ const Demo = () => {
               </p>
             </div>
           </div>
-          <img
-            src={MargaretThompsonLarge}
-            alt="Black and white photo of Margaret Thompson"
-            style={{}}
-          />
-        </div>
-        <div className="life-chapters-container">
-          <h1 style={{ marginBottom: "30px" }}>Life Chapters</h1>
-
-          <div className="carousel-container">
-            <div
-              style={{
-                width: "80%",
-                marginLeft: "auto",
-                marginRight: "auto",
-              }}
-            >
-              <Slider {...settings}>
-                {items.map((item, index) => {
-                  const isCenter = index === activeIndex; // Determine if this slide is the center slide
-                  return (
-                    <div
-                      className={`item ${isCenter ? "center" : ""}`}
-                      key={item.id}
-                    >
-                      <CarouselCard
-                        years={item.years}
-                        imageUrl={item.imageUrl}
-                        title={item.title}
-                        items={item.features}
-                        isCenter={isCenter}
-                        goto={item.goto}
-                      />
-                    </div>
-                  );
-                })}
-              </Slider>
-            </div>
-          </div>
         </div>
       </main>
     </div>
   );
 };
 
-export default Demo;
+export default CollegeYears;

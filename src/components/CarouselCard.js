@@ -1,7 +1,7 @@
 import React from "react";
 import "./CarouselCard.css"; // Assume you have corresponding CSS for styling
 
-function CarouselCard({ years, imageUrl, title, items, isCenter }) {
+function CarouselCard({ years, imageUrl, title, items, isCenter, goto }) {
   const hasItems = items && items.length > 0;
 
   const cardClass = `carousel-card ${!hasItems ? "border-transparent" : ""}`;
@@ -24,7 +24,11 @@ function CarouselCard({ years, imageUrl, title, items, isCenter }) {
           ))}
         </div>
         <div className="button-container">
-          {isCenter && <button className="learn-more">Learn More</button>}
+          {isCenter && (
+            <button className="learn-more" onClick={goto}>
+              Learn More
+            </button>
+          )}
         </div>
       </div>
     </div>
