@@ -227,7 +227,11 @@ function Home() {
             </section>
           </div>
         </Element>
-        <Element name="join-our-waitlist" className="centered-flexbox">
+        <Element
+          name="join-our-waitlist"
+          className="centered-flexbox"
+          id="waitlist"
+        >
           <div style={{ width: "50%" }}>
             <h1
               style={{

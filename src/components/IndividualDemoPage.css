@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.header-container {
+  display: flex;
+  flex-direction: column; /* Stack name and location-date vertically */
+  align-items: center; /* Center-align the items */
+  width: 80%;
+  margin: 20px auto;
+}
+
+.name-heading-container {
+  margin-bottom: 10px; /* Add some space below the name */
+  text-align: left; /* Center the text */
+  font-size: 24px; /* Adjust font size as needed */
+  font-family: "Poppins", sans-serif;
+
+  width: 100%;
+}
+
+.location-date-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* This will space out the two h1 tags */
+  width: 100%; /* Use full available width */
+}
+
+.responsive-iframe {
+  position: relative;
+  overflow: hidden; /* This overflow applies to the container to ensure corners are clipped */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  width: 100%; /* Full width */
+}
+
+iframe {
+  border-radius: 20px; /* Rounded corners */
+  border: none; /* Remove the default iframe border */
+}

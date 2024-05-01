@@ -5,12 +5,7 @@ import MargaretThompson from "../images/margaret-thompson.png";
 import CollegeLife from "../images/college-life.png";
 import MargaretThompsonLarge from "../images/m-thompson-large.png";
 import CareerAndCommunity from "../images/career-and-community.png";
-
-import "react-multi-carousel/lib/styles.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./Demo.css";
+import "./IndividualDemoPage.css";
 
 const EarlyLife = () => {
   const headingRef = useRef(null);
@@ -150,62 +145,29 @@ const EarlyLife = () => {
 
   return (
     <div className="homepage">
-      <header className="header">
-        <nav className="navbar" ref={headingRef}>
-          <ul className="nav-list">
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Palatino Linotype, serif",
-                fontWeight: "bold",
-                fontSize: "32px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
-              Virgil
-            </button>
-          </ul>
-          {/** join waitlist button */}
-        </nav>
-      </header>
       <main className="main-content">
-        <div className="overall-heading-container">
-          <div className="heading-text-container">
-            <div className="heading-title-container">
-              <div className="sub-heading"> Maragaret Thompson </div>
-              <h1 className="main-heading"> Early life in new york</h1>
-            </div>
-            <div className="heading-content-container">
-              <p>
-                Maggie's life story is a testment to the impact one individual
-                can have on their community and family. Her dedication to
-                education, love for the arts, and commitment to community
-                service left a lasting legacy.
-              </p>
-              <br></br>
-
-              <p>
-                <span style={{ fontWeight: "bold" }}>Born:</span> July 15, 1938
-              </p>
-              <p>
-                <span style={{ fontWeight: "bold" }}>Age:</span> 85 years old
-              </p>
-              <p>
-                <span style={{ fontWeight: "bold" }}>Spouse:</span> Thomas
-                Thompson
-              </p>
-
-              <div class="video-container">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/jkn9HcVPJJE"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+        <div>
+          <div>
+            <div className="header-container">
+              <div className="name-heading-container">
+                {" "}
+                <div className="name-heading">Betty Rollins</div>
               </div>
+
+              <div className="location-date-heading">
+                <h1>Early Life in New York</h1>
+                <h1>1938-1956</h1>
+              </div>
+            </div>
+            <div class="video-container">
+              <iframe
+                width="1120"
+                height="630"
+                src="https://www.youtube.com/embed/jkn9HcVPJJE"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>

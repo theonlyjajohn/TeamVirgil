@@ -22,6 +22,11 @@ const Demo = () => {
     navigate("/home");
   };
 
+  const goToWaitList = () => {
+    navigate("/home#waitlist");
+    // Any other actions that do not depend on navigation completion
+  };
+
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -181,8 +186,45 @@ const Demo = () => {
             >
               Virgil
             </button>
+            <button
+              onClick={goToHome}
+              style={{
+                fontFamily: "Open Sans, sans-serif",
+                fontSize: "20px",
+                border: "transparent",
+                backgroundColor: "transparent",
+              }}
+            >
+              How it works
+            </button>
+            <button
+              onClick={goToHome}
+              style={{
+                fontFamily: "Open Sans, sans-serif",
+                fontSize: "20px",
+                border: "transparent",
+                backgroundColor: "transparent",
+              }}
+            >
+              What's included
+            </button>
+            <button
+              onClick={goToHome}
+              style={{
+                fontFamily: "Open Sans, sans-serif",
+                fontSize: "20px",
+                border: "transparent",
+                backgroundColor: "transparent",
+              }}
+            >
+              Explore Demo
+            </button>
           </ul>
-          {/** join waitlist button */}
+          <ul className="nav-waitlist">
+            <button onClick={goToWaitList} className="nav-link-waitlist">
+              Join Waitlist
+            </button>
+          </ul>
         </nav>
       </header>
       <main className="main-content">
@@ -190,14 +232,11 @@ const Demo = () => {
           <div className="heading-text-container">
             <div className="heading-title-container">
               <div className="sub-heading"> The Story of </div>
-              <h1 className="main-heading">
-                {" "}
-                Margaret <br></br>Thompson
-              </h1>
+              <h1 className="main-heading"> Betty Rollins</h1>
             </div>
             <div className="heading-content-container">
               <p>
-                Maggie's life story is a testment to the impact one individual
+                Betty's life story is a testment to the impact one individual
                 can have on their community and family. Her dedication to
                 education, love for the arts, and commitment to community
                 service left a lasting legacy.
@@ -222,7 +261,7 @@ const Demo = () => {
           </div>
           <img
             src={MargaretThompsonLarge}
-            alt="Black and white photo of Margaret Thompson"
+            alt="Black and white photo of Betty Rollins"
             style={{}}
           />
         </div>

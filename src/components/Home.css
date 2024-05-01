@@ -190,6 +190,10 @@ body {
   padding-right: 100px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .waitlist-container {
   padding-top: 20px;
 }

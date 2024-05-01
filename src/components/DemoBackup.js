@@ -83,12 +83,12 @@ const DemoBackup = () => {
       <main className="main-content">
         <div className="heading-container">
           <div className="sub-heading"> The Story of </div>
-          <h1 className="main-heading"> Margaret Thompson</h1>
+          <h1 className="main-heading"> Betty Rollins</h1>
         </div>
         <div className="content-container">
           <img
             src={MargaretThompson}
-            alt="Black and white photo of Margaret Thompson"
+            alt="Black and white photo of Betty Rollins"
             style={{ width: "auto", height: "100%", objectFit: "cover" }}
           />
           <div className="content-text-container">
