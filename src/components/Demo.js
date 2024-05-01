@@ -85,7 +85,7 @@ const Demo = () => {
       imageUrl: EarlyLife,
       years: "1938-1956",
       title: "Early Life in Ithaca",
-      features: ["My brother", "Playing in the woods", "Family values"],
+      features: ["My Best Friends", "A Vibrant Community", "A Strange Family"],
       goto: goToEarlyLife,
     },
     {
@@ -195,7 +195,7 @@ const Demo = () => {
                 backgroundColor: "transparent",
               }}
             >
-              How it works
+              How it Works
             </button>
             <button
               onClick={goToHome}
@@ -206,7 +206,7 @@ const Demo = () => {
                 backgroundColor: "transparent",
               }}
             >
-              What's included
+              What's Included
             </button>
             <button
               onClick={goToHome}
@@ -254,8 +254,8 @@ const Demo = () => {
                 Thompson
               </p>
               <p>
-                Proudly sponsored by Mary Thompson, with interviews by Lily
-                Jane.
+                <br></br>
+                Proudly sponsored by Mary Thompson, with contributions from the Rollins family.
               </p>
             </div>
           </div>
