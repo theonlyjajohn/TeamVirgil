@@ -342,17 +342,16 @@ function Home() {
                     <label>
                       Whose story would you like to capture?
                       {/** make default value blank*/}
-                      <select>
-                        <option selected value=""></option>
-                        <option value="grapefruit">Grapefruit</option>
-                        <option value="lime">Lime</option>
-                        <option value="mango">Mango</option>
-                      </select>
+                      <input
+                        type="text"
+                        value={subject}
+                        onChange={handleChangeSubject}
+                      />
                     </label>
                     <label>
                       Why are you interested in capturing their story?
                       <input
-                        type="motivation"
+                        type="text"
                         value={motivation}
                         onChange={handleChangeMotivation}
                       />
