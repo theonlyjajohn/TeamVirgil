@@ -5,6 +5,9 @@ import MargaretThompson from "../images/margaret-thompson.png";
 import CollegeLife from "../images/college-life.png";
 import MargaretThompsonLarge from "../images/m-thompson-large.png";
 import CareerAndCommunity from "../images/career-and-community.png";
+import IthacaImage from "../images/ithaca.jpg";
+import ChildrenPlaying from "../images/playing.jpg";
+
 import "./IndividualDemoPage.css";
 
 const EarlyLife = () => {
@@ -159,15 +162,32 @@ const EarlyLife = () => {
                 <h1>1938-1956</h1>
               </div>
             </div>
-            <div class="video-container">
-              <iframe
-                width="1120"
-                height="630"
-                src="https://www.youtube.com/embed/jkn9HcVPJJE"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+            <div className="media-container" style={{ maxWidth: '1120px', margin: '0 auto' }}>
+              <div class="video-container">
+                <iframe
+                  width="1120"
+                  height="630"
+                  src="https://www.youtube.com/embed/jkn9HcVPJJE"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              {/* Flex container for images */}
+              <div className="images-container" style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
+                <div className="photo-container">
+                  <img src={MargaretThompsonLarge} alt="Description of First Image" style={{ width: '80%', height: 'auto' }} />
+                  <figcaption style={{ textAlign: 'center' }}>Betty's mother, uploaded by Aunt Catherine.</figcaption>
+                </div>
+                <div className="photo-container">
+                  <img src={ChildrenPlaying} alt = "children" style={{ width: '80%', height: 'auto' }} />
+                  <figcaption style={{ textAlign: 'center' }}>Betty playing as a young girl.</figcaption>
+                </div>
+                <div className="photo-container">
+                  <img src={IthacaImage} alt="Description of Second Image" style={{ width: '99%', height: 'auto' }} />
+                  <figcaption style={{ textAlign: 'center' }}>1938 Postcard of Cornell University, in Ithaca.</figcaption>
+                </div>
+              </div>
             </div>
           </div>
         </div>

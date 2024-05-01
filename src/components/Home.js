@@ -9,6 +9,7 @@ import {
   scrollSpy,
 } from "react-scroll";
 
+
 //import { firestore } from "../firebase";
 //import { addDoc, collection} from "@firebase/firestore";
 // import { addDoc, collection } from "firebase/firestore";
@@ -25,6 +26,7 @@ import completeInterviews from "../images/complete-interviews.png";
 import receiveVirgilVault from "../images/receive-virgil-vault.png";
 
 import "./Home.css"; // Assume you have corresponding CSS for styling
+import { toast, ToastContainer } from "react-toastify";
 
 function Home() {
   const navigate = useNavigate();
@@ -33,6 +35,7 @@ function Home() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [subject, setSubject] = useState("");
   const [motivation, setMotivation] = useState("");
+  const [heardFrom, setSelectedValue] = useState("");
 
   const goToDemo = () => {
     navigate("/demo");
@@ -61,22 +64,34 @@ function Home() {
     setMotivation(event.target.value);
   };
 
+  // Function to handle the change in dropdown
+  const handleChangeDiscovery = (event) => {
+    setSelectedValue(event.target.value); // Update the state with new value
+    console.log(event.target.value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // access email like the line below
-    console.log(email);
-    /*
+  
     let data = {
-      message: email
-    } 
+      email: email,
+      name: fullName,
+      phone: phoneNumber,
+      subject: subject,
+      motivation: motivation,
+      source: heardFrom
+    };
+    
+    console.log(data);
 
-    try {
-      addDoc(ref, data)
-    } catch (event) {
-      console.log(event)
-    }*/
-
-    alert(`An email was submitted: ${email}`);
+    // try {
+    //   addDoc(ref, data)
+    // } catch (event) {
+    //   console.log(event)
+    // }
+    toast.success("Thank you for your interest! We'll notify you when capacity becomes available.", {
+      position: "bottom-center"
+    });
   };
 
   return (
@@ -97,10 +112,10 @@ function Home() {
               Virgil
             </button>
             <Link to="how-it-works" className="nav-link">
-              How it works
+              How it Works
             </Link>
             <Link to="join-our-waitlist" className="nav-link">
-              What's included
+              What's Included
             </Link>
             <Link to="explore-demo" className="nav-link">
               Explore Demo
@@ -118,7 +133,7 @@ function Home() {
           <div className="about-us-flex-container">
             <section className="about-us-text-container">
               <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>
-                Preserve your <span className="gradient-text">grandma's</span>
+                Preserve your <span className="gradient-text">loved one's</span>
                 <br />
                 legacy. One <span className="gradient-text">memory</span> at a
                 time.
@@ -244,7 +259,7 @@ function Home() {
                 height: "auto",
               }}
             >
-              What's included
+              What's Included
             </h1>
             <div className="waitlist-holder">
               <div
@@ -356,6 +371,18 @@ function Home() {
                         onChange={handleChangeMotivation}
                       />
                     </label>
+                    <label>
+                      How did you hear about us?
+                      <select value = {heardFrom} onChange = {handleChangeDiscovery}> 
+                        <option selected value=""></option>
+                        <option value="reddit">Reddit</option>
+                        <option value="facebook">Facebook/Instagram</option>
+                        <option value="email">E-mail</option>
+                        <option value="friend/family">Friend/Family</option>
+                        <option value="seniorliving">Senior Living Facility</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </label>
                     <button type="submit" className="waitlist-button">
                       Join Our Waitlist
                     </button>
@@ -403,6 +430,8 @@ function Home() {
           </div>
         </Element>
       </main>
+      <ToastContainer
+      />
     </div>
   );
 }
