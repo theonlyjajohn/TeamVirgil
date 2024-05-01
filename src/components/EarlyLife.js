@@ -167,7 +167,7 @@ const EarlyLife = () => {
                 <iframe
                   width="1120"
                   height="630"
-                  src="https://www.youtube.com/embed/jkn9HcVPJJE"
+                  src="https://www.youtube.com/embed/jkn9HcVPJJE?start=13&autoplay=1&mute=0"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
@@ -177,7 +177,7 @@ const EarlyLife = () => {
               <div className="images-container" style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
                 <div className="photo-container">
                   <img src={MargaretThompsonLarge} alt="Description of First Image" style={{ width: '80%', height: 'auto' }} />
-                  <figcaption style={{ textAlign: 'center' }}>Betty's mother, uploaded by Aunt Catherine.</figcaption>
+                  <figcaption style={{ textAlign: 'center' }}>Betty's High School Photo, uploaded by Aunt Catherine.</figcaption>
                 </div>
                 <div className="photo-container">
                   <img src={ChildrenPlaying} alt = "children" style={{ width: '80%', height: 'auto' }} />

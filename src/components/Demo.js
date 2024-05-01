@@ -234,7 +234,7 @@ const Demo = () => {
               <div className="sub-heading"> The Story of </div>
               <h1 className="main-heading"> Betty Rollins</h1>
             </div>
-            <div className="heading-content-container">
+            <div className="heading-content-container"style={{backgroundColor: 'white'}} >
               <p>
                 Betty's life story is a testment to the impact one individual
                 can have on their community and family. Her dedication to
