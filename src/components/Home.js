@@ -11,8 +11,8 @@ import {
 
 
 import { firestore } from "../firebase";
-import { addDoc, collection} from "@firebase/firestore";
-// import { addDoc, collection } from "firebase/firestore";
+// import { addDoc, collection} from "@firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 
 // import whatsIncludedBg from "../images/whats-included-bg.png";
 import whatsIncludedBigBg from "../images/whats-included-big-bg.png";
@@ -29,6 +29,9 @@ import "./Home.css"; // Assume you have corresponding CSS for styling
 import { toast, ToastContainer } from "react-toastify";
 
 function Home() {
+
+  const ref = collection(firestore, "waitlist_data");
+
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
