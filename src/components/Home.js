@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Link,
-  Button,
+  // Button,
   Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
+  // Events,
+  // animateScroll as scroll,
+  // scrollSpy,
 } from "react-scroll";
 
 
@@ -14,7 +14,7 @@ import {
 //import { addDoc, collection} from "@firebase/firestore";
 // import { addDoc, collection } from "firebase/firestore";
 
-import whatsIncludedBg from "../images/whats-included-bg.png";
+// import whatsIncludedBg from "../images/whats-included-bg.png";
 import whatsIncludedBigBg from "../images/whats-included-big-bg.png";
 import downArrow from "../images/down-arrow.png";
 import leftMacbook from "../images/left.png";
@@ -89,7 +89,15 @@ function Home() {
     // } catch (event) {
     //   console.log(event)
     // }
-    toast.success("Thank you for your interest! We'll notify you when capacity becomes available.", {
+    // toast.success("Thank you for your interest! We'll notify you when capacity becomes available.", {
+    //   position: "bottom-center"
+    // });
+    toast.success(
+      <div>
+        Thank you for your interest!
+        <br/><br/>
+        We'll notify you when capacity becomes available.
+      </div>, {
       position: "bottom-center"
     });
   };
@@ -230,7 +238,7 @@ function Home() {
                   <h1 className="number-circle"> 03</h1>
                   <h1 className="feature-title">
                     {" "}
-                    Receive Your Virgil Vaults{" "}
+                    Receive Your Virgil Vault{" "}
                   </h1>
                   <p>
                     Virgil organizes your loved one’s story into a beautiful,
@@ -247,7 +255,7 @@ function Home() {
           className="centered-flexbox"
           id="waitlist"
         >
-          <div style={{ width: "50%" }}>
+          <div style={{ width: "80%" }}>
             <h1
               style={{
                 fontSize: "48px",
@@ -289,14 +297,15 @@ function Home() {
 
                     <ul>
                       <li>
+                        Virgil Vault — an interactive archive that merges their
+                        voice with photos, videos, and more
+                      </li>
+                      <li>
                         10 hours of conversational interviews — enough to
                         capture their entire life story!
                       </li>
                       <li>High-fidelity audio and video recordings</li>
-                      <li>
-                        Virgil Vault — an interactive archive that merges their
-                        voice with photos, videos, and more
-                      </li>
+
                       <li>
                         Searchable video library to easily find specific
                         memories
@@ -305,9 +314,16 @@ function Home() {
                         A personal historian who will guide your family through
                         the entire process
                       </li>
-                      <li>Safe, secure, and private to you</li>
+                      <li>Safe, secure, and private to you and your family</li>
                       <li>Shareable and downloadable</li>
                     </ul>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <button type="submit" className="waitlist-button">
+                      Schedule a Consultation
+                    </button>
                   </div>
                 </div>
               </div>
@@ -431,6 +447,12 @@ function Home() {
         </Element>
       </main>
       <ToastContainer
+        toastStyle={{
+          fontSize: '24px',
+          padding: '20px',
+          minHeight: '100px',
+          width: "500px"
+        }}
       />
     </div>
   );
