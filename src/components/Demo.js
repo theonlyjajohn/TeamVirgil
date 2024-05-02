@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import CarouselCard from "./CarouselCard";
-import MargaretThompson from "../images/margaret-thompson.png";
+// import MargaretThompson from "../images/margaret-thompson.png";
 import EarlyLife from "../images/early-life.png";
 import CollegeLife from "../images/college-life.png";
 import MargaretThompsonLarge from "../images/m-thompson-large.png";
@@ -28,7 +28,7 @@ const Demo = () => {
   };
 
   function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
       <div className={className} style={{ ...styling }} onClick={onClick} />
     );
