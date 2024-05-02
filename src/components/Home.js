@@ -10,8 +10,8 @@ import {
 } from "react-scroll";
 
 
-//import { firestore } from "../firebase";
-//import { addDoc, collection} from "@firebase/firestore";
+import { firestore } from "../firebase";
+import { addDoc, collection} from "@firebase/firestore";
 // import { addDoc, collection } from "firebase/firestore";
 
 // import whatsIncludedBg from "../images/whats-included-bg.png";
@@ -84,11 +84,11 @@ function Home() {
     
     console.log(data);
 
-    // try {
-    //   addDoc(ref, data)
-    // } catch (event) {
-    //   console.log(event)
-    // }
+    try {
+      addDoc(ref, data)
+    } catch (event) {
+      console.log(event)
+    }
     // toast.success("Thank you for your interest! We'll notify you when capacity becomes available.", {
     //   position: "bottom-center"
     // });
