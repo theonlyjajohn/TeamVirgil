@@ -60,7 +60,7 @@ const CareerCommunity = () => {
 
     const handleResize = () => {
       const width = window.innerWidth;
-      let newDeviceType = deviceType;
+      let newDeviceType = "desktop";
       if (width < 1024 && width >= 464) {
         newDeviceType = "tablet";
       } else if (width < 464) {
@@ -75,24 +75,24 @@ const CareerCommunity = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [deviceType]);
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
+  // const responsive = {
+  //   desktop: {
+  //     breakpoint: { max: 3000, min: 1024 },
+  //     items: 3,
+  //   },
+  //   tablet: {
+  //     breakpoint: { max: 1024, min: 464 },
+  //     items: 2,
+  //     slidesToSlide: 2,
+  //   },
+  //   mobile: {
+  //     breakpoint: { max: 464, min: 0 },
+  //     items: 1,
+  //     slidesToSlide: 1,
+  //   },
+  // };
 
   return (
     <div className="homepage">
@@ -112,6 +112,7 @@ const CareerCommunity = () => {
             </div>
             <div class="video-container">
               <iframe
+                title='youtube embed'
                 width="1120"
                 height="630"
                 src="https://www.youtube.com/embed/jkn9HcVPJJE"

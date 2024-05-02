@@ -60,7 +60,7 @@ const CollegeYears = () => {
 
     const handleResize = () => {
       const width = window.innerWidth;
-      let newDeviceType = deviceType;
+      let newDeviceType = 'desktop';
       if (width < 1024 && width >= 464) {
         newDeviceType = "tablet";
       } else if (width < 464) {
@@ -75,7 +75,7 @@ const CollegeYears = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [deviceType]);
 
   // const responsive = {
   //   desktop: {
@@ -110,8 +110,9 @@ const CollegeYears = () => {
                 <h1>1957-1961</h1>
               </div>
             </div>
-            <div class="video-container">
+            <div class="video-container-youtube">
               <iframe
+                title = "youtube video"
                 width="1120"
                 height="630"
                 src="https://www.youtube.com/embed/jkn9HcVPJJE"

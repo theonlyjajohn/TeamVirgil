@@ -112,7 +112,7 @@ const EarlyLife = () => {
 
     const handleResize = () => {
       const width = window.innerWidth;
-      let newDeviceType = deviceType;
+      let newDeviceType = "desktop";
       if (width < 1024 && width >= 464) {
         newDeviceType = "tablet";
       } else if (width < 464) {
@@ -127,7 +127,7 @@ const EarlyLife = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [deviceType]);
 
   // const responsive = {
   //   desktop: {
@@ -165,6 +165,7 @@ const EarlyLife = () => {
             <div className="media-container" style={{ maxWidth: '1120px', margin: '0 auto' }}>
               <div class="video-container">
                 <iframe
+                  title = 'youtube'
                   width="1120"
                   height="630"
                   src="https://www.youtube.com/embed/jkn9HcVPJJE?start=13&autoplay=1&mute=0"
@@ -176,7 +177,7 @@ const EarlyLife = () => {
               {/* Flex container for images */}
               <div className="images-container" style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
                 <div className="photo-container">
-                  <img src={MargaretThompsonLarge} alt="Description of First Image" style={{ width: '80%', height: 'auto' }} />
+                  <img src={MargaretThompsonLarge} alt="first" style={{ width: '80%', height: 'auto' }} />
                   <figcaption style={{ textAlign: 'center' }}>Betty's High School Photo, uploaded by Aunt Catherine.</figcaption>
                 </div>
                 <div className="photo-container">
@@ -184,7 +185,7 @@ const EarlyLife = () => {
                   <figcaption style={{ textAlign: 'center' }}>Betty playing as a young girl.</figcaption>
                 </div>
                 <div className="photo-container">
-                  <img src={IthacaImage} alt="Description of Second Image" style={{ width: '99%', height: 'auto' }} />
+                  <img src={IthacaImage} alt="second" style={{ width: '99%', height: 'auto' }} />
                   <figcaption style={{ textAlign: 'center' }}>1938 Postcard of Cornell University, in Ithaca.</figcaption>
                 </div>
               </div>

@@ -135,7 +135,7 @@ const Demo = () => {
 
     const handleResize = () => {
       const width = window.innerWidth;
-      let newDeviceType = deviceType;
+      let newDeviceType = "desktop";
       if (width < 1024 && width >= 464) {
         newDeviceType = "tablet";
       } else if (width < 464) {
@@ -150,7 +150,7 @@ const Demo = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [deviceType]);
 
   // const responsive = {
   //   desktop: {
@@ -261,7 +261,7 @@ const Demo = () => {
           </div>
           <img
             src={MargaretThompsonLarge}
-            alt="Black and white photo of Betty Rollins"
+            alt="Black and white of Betty Rollins"
             style={{}}
           />
         </div>
