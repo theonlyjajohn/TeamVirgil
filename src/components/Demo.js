@@ -47,13 +47,13 @@ const Demo = () => {
     navigate("/early-life");
   };
 
-  const goToCollegeYears = () => {
-    navigate("/college-years");
-  };
+  // const goToCollegeYears = () => {
+  //   navigate("/college-years");
+  // };
 
-  const goToCareerCommunity = () => {
-    navigate("/career-community");
-  };
+  // const goToCareerCommunity = () => {
+  //   navigate("/career-community");
+  // };
 
   const styling = {
     color: "black",
@@ -86,6 +86,7 @@ const Demo = () => {
       years: "1938-1956",
       title: "Early Life in Ithaca",
       features: ["My Best Friends", "A Vibrant Community", "A Strange Family"],
+      buttonText: "Learn More",
       goto: goToEarlyLife,
     },
     {
@@ -98,7 +99,8 @@ const Demo = () => {
         "Sorority life",
         "First relationship",
       ],
-      goto: goToCollegeYears,
+      buttonText: "Coming Soon!",
+      // goto: goToCollegeYears,
     },
     {
       id: 3,
@@ -106,7 +108,8 @@ const Demo = () => {
       years: "1961-1970",
       title: "Career & Community",
       features: ["Teaching high school", "Volunteering with gardening"],
-      goto: goToCareerCommunity,
+      buttonText: "Coming Soon!",
+      // goto: goToCareerCommunity,
     },
     {
       id: 4,
@@ -290,6 +293,7 @@ const Demo = () => {
                         title={item.title}
                         items={item.features}
                         isCenter={isCenter}
+                        buttonText={item.buttonText}
                         goto={item.goto}
                       />
                     </div>

@@ -324,9 +324,9 @@ function Home() {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <button type="submit" className="waitlist-button">
+                    {/* <button type="submit" className="waitlist-button">
                       Schedule a Consultation
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
