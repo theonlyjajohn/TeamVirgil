@@ -2,10 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import CarouselCard from "./CarouselCard";
 // import MargaretThompson from "../images/margaret-thompson.png";
-import EarlyLife from "../images/early-life.png";
-import CollegeLife from "../images/college-life.png";
-import MargaretThompsonLarge from "../images/m-thompson-large.png";
-import CareerAndCommunity from "../images/career-and-community.png";
+import c1 from "../images/carousel_images/c1.png";
+import c2 from "../images/carousel_images/c2.png";
+import c3 from "../images/carousel_images/c3.png";
+import c4 from "../images/carousel_images/c4.png";
+import c5 from "../images/carousel_images/c5.png";
+import c6 from "../images/carousel_images/c6.png";
+import c7 from "../images/carousel_images/c7.png";
+// import MargaretThompsonLarge from "../images/m-thompson-large.png"
+import bettyHeadshot from "../images/betty_headshot.png";
+
+
 
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
@@ -60,10 +67,10 @@ const Demo = () => {
   };
 
   const settings = {
-    initialSlide: 1,
+    initialSlide: 0,
     centerMode: true,
     infinite: false,
-    centerPadding: "60px",
+    centerPadding: "25px",
     slidesToShow: 3,
     speed: 500,
     arrows: true,
@@ -82,44 +89,68 @@ const Demo = () => {
     },
     {
       id: 1,
-      imageUrl: EarlyLife,
-      years: "1938-1956",
+      imageUrl: c1,
+      years: "1938-1948",
       title: "Early Life in Ithaca",
-      features: ["My Best Friends", "A Vibrant Community", "A Strange Family"],
+      features: ["Family Background", "Mother's Influence", "Extracurricular Beginnings"],
       buttonText: "Learn More",
       goto: goToEarlyLife,
     },
     {
       id: 2,
-      imageUrl: CollegeLife,
-      years: "1957-1961",
-      title: "College Years",
+      imageUrl: c2,
+      years: "1949-1954",
+      title: "Education & Teenage Years",
       features: [
-        "Studying English Literature",
-        "Sorority life",
-        "First relationship",
+        "Advanced Studies",
+        "Cultural and Social Development",
+        "Develeping Independence",
       ],
       buttonText: "Coming Soon!",
       // goto: goToCollegeYears,
     },
     {
       id: 3,
-      imageUrl: CareerAndCommunity,
-      years: "1961-1970",
-      title: "Career & Community",
-      features: ["Teaching high school", "Volunteering with gardening"],
+      imageUrl: c3,
+      years: "1955-1960",
+      title: "Early Career & Acting",
+      features: ["Beginning as an Actress", "Realization and Shifts", "Transition to Writing"],
       buttonText: "Coming Soon!",
       // goto: goToCareerCommunity,
     },
     {
       id: 4,
-      imageUrl: "",
-      years: "",
-      title: "",
-      features: [],
+      imageUrl: c4,
+      years: "1961-1970",
+      title: "Professional Writing Career",
+      features: ["Entry into journalism", "Skills Development", "Recognition and Setbacks"],
+      buttonText: "Coming Soon!",
     },
     {
-      id: 0,
+      id: 5,
+      imageUrl: c5,
+      years: "1971-1980",
+      title: "Television Journalism & Greatest Challenges",
+      features: ["Shift to Television" , "Battle with Breast Cancer", "Authorship"],
+      buttonText: "Coming Soon!",
+    },
+    {
+      id: 6,
+      imageUrl: c6,
+      years: "1981-2000",
+      title: "Later Career & Advocacy",
+      features: ["Continued Writing and TV Career", "Family and Personal Life", "New Advocacy Efforts"],
+      buttonText: "Coming Soon!",
+    },
+    {
+      id: 7,
+      imageUrl: c7,
+      years: "2001-Present",
+      title: "Reflection & Legacy",
+      features: ["Reflecting on Life Lessons", "Loss and Coping", "Ongoing Advocacy"],
+    },
+    {
+      id: 8,
       imageUrl: "",
       years: "",
       title: "",
@@ -155,22 +186,22 @@ const Demo = () => {
     };
   }, [deviceType]);
 
-  // const responsive = {
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 3,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 2,
-  //     slidesToSlide: 2,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //     slidesToSlide: 1,
-  //   },
-  // };
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+  };
 
   return (
     <div className="homepage">
@@ -257,19 +288,18 @@ const Demo = () => {
                 <span style={{ fontWeight: "bold" }}>Age:</span> 85 years old
               </p>
               <p>
-                <span style={{ fontWeight: "bold" }}>Spouse:</span> Thomas
-                Thompson
+                <span style={{ fontWeight: "bold" }}>Spouse:</span> Harold Edwards
               </p>
               <p>
                 <br></br>
                 Proudly sponsored by Mary Thompson, with contributions from the
-                Rollins family.
+                Rollin family.
               </p>
             </div>
           </div>
           <img
-            src={MargaretThompsonLarge}
-            alt="Black and white of Betty Rollins"
+            src={bettyHeadshot}
+            alt="Black and white of Betty Rollin"
             style={{}}
           />
         </div>
