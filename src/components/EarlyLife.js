@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import ReactPlayer from 'react-player';
 import { useNavigate } from "react-router-dom";
 // import CarouselCard from "./CarouselCard";
 // import MargaretThompson from "../images/margaret-thompson.png";
@@ -7,6 +8,7 @@ import MargaretThompsonLarge from "../images/m-thompson-large.png";
 // import CareerAndCommunity from "../images/career-and-community.png";
 import IthacaImage from "../images/ithaca.jpg";
 import ChildrenPlaying from "../images/playing.jpg";
+import Chapter1Video from "../images/chapter1.mp4";
 
 import "./IndividualDemoPage.css";
 
@@ -195,15 +197,13 @@ const EarlyLife = () => {
               style={{ maxWidth: "1120px", margin: "0 auto" }}
             >
               <div class="video-container">
-                <iframe
-                  title="youtube"
-                  width="1120"
-                  height="630"
-                  src="https://www.youtube.com/embed/jkn9HcVPJJE?start=13&autoplay=1&mute=0"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <ReactPlayer
+                  className='react-player fixed-bottom'
+                  url={Chapter1Video}
+                  width='100%'
+                  height='80%'
+                  controls={true}
+                />
               </div>
               <div className="family-container">
                 <div className="family-heading">Family Background</div>
