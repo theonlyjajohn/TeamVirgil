@@ -209,7 +209,7 @@ const EarlyLife = () => {
                 <div className="family-heading">Family Background</div>
                 <div className="family-content">
                   Betty grew up in Lincoln Park, a suburb of Yonkers. She was an
-                  only child with a Ukrainian father who adored American and an
+                  only child with a Ukrainian father who adored America and an
                   ambitious mother who was always striving for more
                 </div>
               </div>
