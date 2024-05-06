@@ -60,7 +60,7 @@ const CollegeYears = () => {
 
     const handleResize = () => {
       const width = window.innerWidth;
-      let newDeviceType = 'desktop';
+      let newDeviceType = "desktop";
       if (width < 1024 && width >= 464) {
         newDeviceType = "tablet";
       } else if (width < 464) {
@@ -96,6 +96,13 @@ const CollegeYears = () => {
 
   return (
     <div className="homepage">
+      <div className="banner">
+        You're viewing a demo of our digital biography feature.{" "}
+        <a href="/" className="link">
+          Return to main site
+        </a>{" "}
+        to start your own journey.
+      </div>
       <main className="main-content">
         <div>
           <div>
@@ -112,7 +119,7 @@ const CollegeYears = () => {
             </div>
             <div class="video-container-youtube">
               <iframe
-                title = "youtube video"
+                title="youtube video"
                 width="1120"
                 height="630"
                 src="https://www.youtube.com/embed/jkn9HcVPJJE"

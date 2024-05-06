@@ -82,36 +82,6 @@ h1 {
   padding: 100px;
   text-align: left;
 }
-/*
-.main-heading {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: 72px;
-  margin: 0;
-}
-
-.sub-heading {
-  font-family: "Poppins", sans-serif;
-  font-size: 32px;
-}
-
-.content-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  margin-top: 60px;
-}
-
-.content-text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  text-align: left;
-  width: 50%;
-  margin-left: 60px;
-  
-}*/
 
 .sub-heading-container {
   width: 70%;
@@ -168,7 +138,6 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, #ffefb5 56%, transparent 50%);
 }
 
 .heading-text-container {
@@ -194,6 +163,8 @@ button {
 .heading-title-container {
   margin-bottom: 50px;
   margin-top: 30px;
+  background: #ffefb5;
+  width: 100%;
 }
 
 /* Additional styling for arrow containers if needed */

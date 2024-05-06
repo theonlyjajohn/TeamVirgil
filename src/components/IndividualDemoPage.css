@@ -8,6 +8,45 @@
   margin: 20px auto;
 }
 
+.family-heading {
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.family-content {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  width: 60%;
+  font-size: 20px;
+}
+
+.family-container {
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.banner {
+  background: linear-gradient(
+    to right,
+    #fee2c3,
+    #f6c062
+  ); /* Adjust the colors as needed */
+  padding: 20px 60px;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid black;
+}
 .name-heading-container {
   margin-bottom: 10px; /* Add some space below the name */
   text-align: left; /* Center the text */

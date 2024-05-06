@@ -96,6 +96,13 @@ const CareerCommunity = () => {
 
   return (
     <div className="homepage">
+      <div className="banner" ref={headingRef}>
+        You're viewing a demo of our digital biography feature.{" "}
+        <a href="/" className="link">
+          Return to main site
+        </a>{" "}
+        to start your own journey.
+      </div>
       <main className="main-content">
         <div>
           <div>
@@ -112,7 +119,7 @@ const CareerCommunity = () => {
             </div>
             <div class="video-container">
               <iframe
-                title='youtube embed'
+                title="youtube embed"
                 width="1120"
                 height="630"
                 src="https://www.youtube.com/embed/jkn9HcVPJJE"

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import CarouselCard from "./CarouselCard";
 // import MargaretThompson from "../images/margaret-thompson.png";
 // import CollegeLife from "../images/college-life.png";
@@ -12,6 +12,12 @@ import "./IndividualDemoPage.css";
 
 const EarlyLife = () => {
   const headingRef = useRef(null);
+  const navigate = useNavigate();
+
+  const goToWaitList = () => {
+    navigate("/home#waitlist");
+    // Any other actions that do not depend on navigation completion
+  };
 
   // const navigate = useNavigate();
 
@@ -146,15 +152,37 @@ const EarlyLife = () => {
   //   },
   // };
 
+  const styles = {
+    banner: {
+      background:
+        "linear-gradient(to right, #FEE2C3, #F6C062)" /* Adjust the colors as needed */,
+      padding: "20px 60px",
+      fontFamily: "Poppins, sans-serif",
+      textAlign: "center",
+    },
+    link: {
+      textDecoration: "none",
+      color: "black",
+      borderBottom: "2px solid black",
+    },
+  };
+
   return (
     <div className="homepage">
+      <div className="banner" ref={headingRef}>
+        You're viewing a demo of our digital biography feature.{" "}
+        <a href="/" className="link">
+          Return to main site
+        </a>{" "}
+        to start your own journey.
+      </div>
       <main className="main-content">
         <div>
           <div>
             <div className="header-container">
               <div className="name-heading-container">
                 {" "}
-                <div className="name-heading">Betty Rollins</div>
+                <div className="name-heading">Betty Rollin</div>
               </div>
 
               <div className="location-date-heading">
@@ -162,10 +190,13 @@ const EarlyLife = () => {
                 <h1>1938-1956</h1>
               </div>
             </div>
-            <div className="media-container" style={{ maxWidth: '1120px', margin: '0 auto' }}>
+            <div
+              className="media-container"
+              style={{ maxWidth: "1120px", margin: "0 auto" }}
+            >
               <div class="video-container">
                 <iframe
-                  title = 'youtube'
+                  title="youtube"
                   width="1120"
                   height="630"
                   src="https://www.youtube.com/embed/jkn9HcVPJJE?start=13&autoplay=1&mute=0"
@@ -174,21 +205,57 @@ const EarlyLife = () => {
                   allowfullscreen
                 ></iframe>
               </div>
-              {/* Flex container for images */}
-              <div className="images-container" style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
-                <div className="photo-container">
-                  <img src={MargaretThompsonLarge} alt="first" style={{ width: '80%', height: 'auto' }} />
-                  <figcaption style={{ textAlign: 'center' }}>Betty's High School Photo, uploaded by Aunt Catherine.</figcaption>
-                </div>
-                <div className="photo-container">
-                  <img src={ChildrenPlaying} alt = "children" style={{ width: '80%', height: 'auto' }} />
-                  <figcaption style={{ textAlign: 'center' }}>Betty playing as a young girl.</figcaption>
-                </div>
-                <div className="photo-container">
-                  <img src={IthacaImage} alt="second" style={{ width: '99%', height: 'auto' }} />
-                  <figcaption style={{ textAlign: 'center' }}>1938 Postcard of Cornell University, in Ithaca.</figcaption>
+              <div className="family-container">
+                <div className="family-heading">Family Background</div>
+                <div className="family-content">
+                  Betty grew up in Lincoln Park, a suburb of Yonkers. She was an
+                  only child with a Ukrainian father who adored American and an
+                  ambitious mother who was always striving for more
                 </div>
               </div>
+              {/* Flex container for images */}
+              <div
+                className="images-container"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  marginTop: "20px",
+                }}
+              >
+                <div className="photo-container">
+                  <img
+                    src={MargaretThompsonLarge}
+                    alt="first"
+                    style={{ width: "80%", height: "auto" }}
+                  />
+                  <figcaption style={{ textAlign: "center" }}>
+                    Betty's High School Photo, uploaded by Aunt Catherine.
+                  </figcaption>
+                </div>
+                <div className="photo-container">
+                  <img
+                    src={ChildrenPlaying}
+                    alt="children"
+                    style={{ width: "80%", height: "auto" }}
+                  />
+                  <figcaption style={{ textAlign: "center" }}>
+                    Betty playing as a young girl.
+                  </figcaption>
+                </div>
+                <div className="photo-container">
+                  <img
+                    src={IthacaImage}
+                    alt="second"
+                    style={{ width: "99%", height: "auto" }}
+                  />
+                  <figcaption style={{ textAlign: "center" }}>
+                    1938 Postcard of Cornell University, in Ithaca.
+                  </figcaption>
+                </div>
+              </div>
+              <button onClick={goToWaitList} className="nav-link-waitlist">
+                Back to life chapters
+              </button>
             </div>
           </div>
         </div>

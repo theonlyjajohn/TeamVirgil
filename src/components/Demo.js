@@ -234,10 +234,14 @@ const Demo = () => {
         <div className="overall-heading-container">
           <div className="heading-text-container">
             <div className="heading-title-container">
-              <div className="sub-heading"> The Story of </div>
-              <h1 className="main-heading"> Betty Rollins</h1>
+              <div className="sub-heading"> The Life of </div>
+              <h1 className="main-heading"> Betty </h1>
+              <h1 className="main-heading"> Rollin </h1>
             </div>
-            <div className="heading-content-container"style={{backgroundColor: 'white'}} >
+            <div
+              className="heading-content-container"
+              style={{ backgroundColor: "white" }}
+            >
               <p>
                 Betty's life story is a testment to the impact one individual
                 can have on their community and family. Her dedication to
@@ -258,7 +262,8 @@ const Demo = () => {
               </p>
               <p>
                 <br></br>
-                Proudly sponsored by Mary Thompson, with contributions from the Rollins family.
+                Proudly sponsored by Mary Thompson, with contributions from the
+                Rollins family.
               </p>
             </div>
           </div>
