@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom";
 import MargaretThompsonLarge from "../images/m-thompson-large.png";
 import IthacaImage from "../images/ithaca.jpg";
 import ChildrenPlaying from "../images/playing.jpg";
+import theaterAndDramaticsBig from "../images/theater-and-dramatics-big.png";
 import ballet1 from "../images/ballet1.png";
 import ballet2 from "../images/ballet2.png";
+import theaterAndDramatics from "../images/theater-and-dramatics.png";
+import writingAndGrammer from "../images/writing-and-grammar.png";
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -19,9 +22,17 @@ import "./IndividualDemoPage.css";
 
 const EarlyLife = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isWritingAndGrammarOpen, setIsWritingAndGrammarOpen] = useState(false);
+  const [isTheaterOpen, setIsTheaterOpen] = useState(false);
+
   const [selectedValue, setSelectedValue] = useState("Ballet Classes");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
+
+  const toggleDropdownWritingAndGrammar = () =>
+    setIsWritingAndGrammarOpen(!isWritingAndGrammarOpen);
+  const toggleDropdownTheater = () => setIsTheaterOpen(!isTheaterOpen);
+
   const handleOptionClick = (value) => {
     setSelectedValue(value);
     setIsOpen(false);
@@ -141,7 +152,7 @@ const EarlyLife = () => {
               <div className="carousel-container">
                 <div
                   style={{
-                    width: "80%",
+                    width: "100%",
                     marginLeft: "auto",
                     marginRight: "auto",
                   }}
@@ -209,7 +220,7 @@ const EarlyLife = () => {
                       onClick={toggleDropdown}
                       className="dropdown-toggle"
                     >
-                      {selectedValue}{" "}
+                      Ballet Class
                       <span className="arrow">{isOpen ? "▲" : "▼"}</span>
                     </button>
                   )}
@@ -237,7 +248,7 @@ const EarlyLife = () => {
                         </div>
                         <button
                           onClick={toggleDropdown}
-                          className="dropdown-toggle"
+                          className="dropdown-toggle-up"
                         >
                           {" "}
                           ▲
@@ -247,61 +258,107 @@ const EarlyLife = () => {
                   )}
                 </div>
               </div>
-              <div className="inner-gray-box-chapter">
-                <div className="gray-box-text-container">
-                  <div className="gray-box-header"> Ballet Classes</div>
-                  <div className="gray-box-content">
-                    {" "}
-                    Every Saturday, I attended ballet class with a teacher who,
-                    as a Christian Scientist, ignored pain. There, I learned not
-                    just to dance but to embody discipline and grace under
-                    pressure.{" "}
-                  </div>
-                </div>
-                <div className="gray-box-image-container">
-                  <img src={ballet1} alt="Down arrow" />
-                  <img src={ballet2} alt="Down arrow" />
+              <div>
+                <div className="dropdown">
+                  {!isTheaterOpen && (
+                    <button
+                      onClick={toggleDropdownTheater}
+                      className="dropdown-toggle"
+                    >
+                      Theater and Dramatics{" "}
+                      <span className="arrow">{isTheaterOpen ? "▲" : "▼"}</span>
+                    </button>
+                  )}
+                  {isTheaterOpen && (
+                    <div>
+                      <div className="gray-box-chapter">
+                        <div className="inner-gray-box-chapter">
+                          <div className="gray-box-text-container">
+                            <div className="gray-box-header">
+                              {" "}
+                              Theater and Dramatics
+                            </div>
+                            <div className="gray-box-content">
+                              {" "}
+                              In her dramatics class, Betty learned to express
+                              herself through speaking and acting. Her journey
+                              toward becoming a professional was gently steered
+                              away by her mother, who wanted these experiences
+                              to enrich her life rather than transform her into
+                              a stage child.{" "}
+                            </div>
+                          </div>
+                          <div className="gray-box-image-container">
+                            <img src={theaterAndDramatics} alt="Down arrow" />
+                          </div>
+                        </div>
+                        <button
+                          onClick={toggleDropdownTheater}
+                          className="dropdown-toggle-up"
+                        >
+                          {" "}
+                          ▲
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
-              <div className="inner-gray-box-chapter">
-                <div className="gray-box-text-container">
-                  <div className="gray-box-header"> Theater and Dramatics</div>
-                  <div className="gray-box-content">
-                    {" "}
-                    In her dramatics class, Betty learned to express herself
-                    through speaking and acting. Her journey toward becoming a
-                    professional was gently steered away by her mother, who
-                    wanted these experiences to enrich her life rather than
-                    transform her into a stage child.{" "}
-                  </div>
-                </div>
-                <div className="gray-box-image-container">
-                  <img src={ballet1} alt="Down arrow" />
-                  <img src={ballet2} alt="Down arrow" />
-                </div>
-              </div>
-              <div className="inner-gray-box-chapter">
-                <div className="gray-box-text-container">
-                  <div className="gray-box-header"> Writing and Grammar</div>
-                  <div className="gray-box-content">
-                    {" "}
-                    Under the strict but nurturing guidance of seasoned editors,
-                    she learned to refine her voice and embrace the
-                    vulnerability in her storytelling.{" "}
-                  </div>
-                </div>
-                <div className="gray-box-image-container">
-                  <img src={ballet1} alt="Down arrow" />
-                  <img src={ballet2} alt="Down arrow" />
+              <div>
+                <div className="dropdown">
+                  {!isWritingAndGrammarOpen && (
+                    <button
+                      onClick={toggleDropdownWritingAndGrammar}
+                      className="dropdown-toggle"
+                    >
+                      Writing and Grammar{" "}
+                      <span className="arrow">
+                        {isWritingAndGrammarOpen ? "▲" : "▼"}
+                      </span>
+                    </button>
+                  )}
+                  {isWritingAndGrammarOpen && (
+                    <div>
+                      <div className="gray-box-chapter">
+                        <div className="inner-gray-box-chapter">
+                          <div className="gray-box-text-container">
+                            <div className="gray-box-header">
+                              {" "}
+                              Writing and Grammar
+                            </div>
+                            <div className="gray-box-content">
+                              {" "}
+                              Under the strict but nurturing guidance of
+                              seasoned editors, she learned to refine her voice
+                              and embrace the vulnerability in her
+                              storytelling..{" "}
+                            </div>
+                          </div>
+                          <div className="gray-box-image-container">
+                            <img src={writingAndGrammer} alt="Down arrow" />
+                          </div>
+                        </div>
+                        <button
+                          onClick={toggleDropdownWritingAndGrammar}
+                          className="dropdown-toggle-up"
+                        >
+                          {" "}
+                          ▲
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="remarkable-mother-container">
+                <div className="left-quotation-mark">“</div>
                 <div className="remarkable-mother-content">
                   The remarkable thing about my mother was that, on top of all
                   that push, she was a kind, loving person. She cared about
                   others, so I learned to be someone who is interested in and
                   cares about other people. I got that from her.
                 </div>
+                <div className="left-quotation-mark">”</div>
               </div>
 
               <div class="video-container">
@@ -314,11 +371,14 @@ const EarlyLife = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
+                <div className="video-description">
+                  Video uploaded by Aunt Deborah Edwards.
+                </div>
               </div>
               <button
                 onClick={goToWaitList}
                 className="nav-link-waitlist"
-                style={{ marginBottom: "30px" }}
+                style={{ margin: "50px 30px" }}
               >
                 Back to life chapters
               </button>
