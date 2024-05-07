@@ -1,16 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-import usePageTracking from "./components/usePageTracking";
-
 import Home from "./components/Home"; // Adjust the import path according to your project structure
 import Demo from "./components/Demo";
 import EarlyLife from "./components/EarlyLife";
 import CollegeYears from "./components/CollegeYears";
 import CareerCommunity from "./components/CareerCommunity";
 function App() {
-  usePageTracking(); // Set up page tracking
-
   return (
     <Router>
       <Routes>
