@@ -156,6 +156,13 @@ const Demo = () => {
       title: "",
       features: [],
     },
+    {
+      id: 9,
+      imageUrl: "",
+      years: "",
+      title: "",
+      features: [],
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(1);
