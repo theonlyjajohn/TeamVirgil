@@ -138,6 +138,13 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    #ffefb5 0%,
+    #ffefb5 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
 }
 
 .heading-text-container {
@@ -161,9 +168,8 @@ button {
 }
 
 .heading-title-container {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 30px;
-  background: #ffefb5;
   width: 100%;
 }
 
