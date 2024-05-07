@@ -12,8 +12,6 @@ import c7 from "../images/carousel_images/c7.png";
 // import MargaretThompsonLarge from "../images/m-thompson-large.png"
 import bettyHeadshot from "../images/betty_headshot.png";
 
-
-
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -67,7 +65,7 @@ const Demo = () => {
   };
 
   const settings = {
-    initialSlide: 0,
+    initialSlide: 1,
     centerMode: true,
     infinite: false,
     centerPadding: "25px",
@@ -92,7 +90,11 @@ const Demo = () => {
       imageUrl: c1,
       years: "1938-1948",
       title: "Early Life in Ithaca",
-      features: ["Family Background", "Mother's Influence", "Extracurricular Beginnings"],
+      features: [
+        "Family Background",
+        "Mother's Influence",
+        "Extracurricular Beginnings",
+      ],
       buttonText: "Learn More",
       goto: goToEarlyLife,
     },
@@ -100,7 +102,7 @@ const Demo = () => {
       id: 2,
       imageUrl: c2,
       years: "1949-1954",
-      title: "Education & Teenage Years",
+      title: "Education & | Teenage Years",
       features: [
         "Advanced Studies",
         "Cultural and Social Development",
@@ -114,7 +116,11 @@ const Demo = () => {
       imageUrl: c3,
       years: "1955-1960",
       title: "Early Career & Acting",
-      features: ["Beginning as an Actress", "Realization and Shifts", "Transition to Writing"],
+      features: [
+        "Beginning as an Actress",
+        "Realization and Shifts",
+        "Transition to Writing",
+      ],
       buttonText: "Coming Soon!",
       // goto: goToCareerCommunity,
     },
@@ -122,16 +128,24 @@ const Demo = () => {
       id: 4,
       imageUrl: c4,
       years: "1961-1970",
-      title: "Professional Writing Career",
-      features: ["Entry into journalism", "Skills Development", "Recognition and Setbacks"],
+      title: "Professional | Writing Career",
+      features: [
+        "Entry into journalism",
+        "Skills Development",
+        "Recognition and Setbacks",
+      ],
       buttonText: "Coming Soon!",
     },
     {
       id: 5,
       imageUrl: c5,
       years: "1971-1980",
-      title: "Television Journalism & Greatest Challenges",
-      features: ["Shift to Television" , "Battle with Breast Cancer", "Authorship"],
+      title: "TV Journalism & | Greatest Challenges",
+      features: [
+        "Shift to Television",
+        "Battle with Breast Cancer",
+        "Authorship",
+      ],
       buttonText: "Coming Soon!",
     },
     {
@@ -139,7 +153,11 @@ const Demo = () => {
       imageUrl: c6,
       years: "1981-2000",
       title: "Later Career & Advocacy",
-      features: ["Continued Writing and TV Career", "Family and Personal Life", "New Advocacy Efforts"],
+      features: [
+        "Continued Writing and TV Career",
+        "Family and Personal Life",
+        "New Advocacy Efforts",
+      ],
       buttonText: "Coming Soon!",
     },
     {
@@ -147,7 +165,12 @@ const Demo = () => {
       imageUrl: c7,
       years: "2001-Present",
       title: "Reflection & Legacy",
-      features: ["Reflecting on Life Lessons", "Loss and Coping", "Ongoing Advocacy"],
+      features: [
+        "Reflecting on Life Lessons",
+        "Loss and Coping",
+        "Ongoing Advocacy",
+      ],
+      buttonText: "Coming Soon!",
     },
     {
       id: 8,
@@ -295,7 +318,8 @@ const Demo = () => {
                 <span style={{ fontWeight: "bold" }}>Age:</span> 85 years old
               </p>
               <p>
-                <span style={{ fontWeight: "bold" }}>Spouse:</span> Harold Edwards
+                <span style={{ fontWeight: "bold" }}>Spouse:</span> Harold
+                Edwards
               </p>
               <p>
                 <br></br>

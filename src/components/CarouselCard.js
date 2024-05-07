@@ -1,7 +1,15 @@
 import React from "react";
 import "./CarouselCard.css"; // Assume you have corresponding CSS for styling
 
-function CarouselCard({ years, imageUrl, title, items, isCenter, buttonText, goto }) {
+function CarouselCard({
+  years,
+  imageUrl,
+  title,
+  items,
+  isCenter,
+  buttonText,
+  goto,
+}) {
   const hasItems = items && items.length > 0;
 
   const cardClass = `carousel-card ${!hasItems ? "border-transparent" : ""}`;
@@ -16,7 +24,14 @@ function CarouselCard({ years, imageUrl, title, items, isCenter, buttonText, got
       </div>
       <div className="carousel-card-body">
         <div className="carousel-card-body-text">
-          <h3>{title}</h3>
+          <h3>
+            {title.split("|").map((part, index) => (
+              <React.Fragment key={index}>
+                {part}
+                {index !== title.split("|").length - 1 && <br />}
+              </React.Fragment>
+            ))}
+          </h3>
           {items.map((item, index) => (
             <p key={index} className="bulleted">
               {item}
