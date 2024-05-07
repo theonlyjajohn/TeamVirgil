@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 import MargaretThompsonLarge from "../images/m-thompson-large.png";
 import IthacaImage from "../images/ithaca.jpg";
 import ChildrenPlaying from "../images/playing.jpg";
-<<<<<<< HEAD
 import Chapter1Video from "../images/chapter1.mp4";
-=======
 import ballet1 from "../images/ballet1.png";
 import ballet2 from "../images/ballet2.png";
 import "react-multi-carousel/lib/styles.css";
@@ -18,7 +16,6 @@ import makeupClasses from "../images/makeup-classes-on-fifth-avenue.png";
 import iceCream from "../images/ice-cream-at-addie-valens.png";
 import myContentedFather from "../images/my-contented-father.png";
 import grewUpInLincolnPark from "../images/grew-up-in-lincoln-park.png";
->>>>>>> a92b462b2482564f291088d58ba1a7d3762ac80c
 
 import "./IndividualDemoPage.css";
 
