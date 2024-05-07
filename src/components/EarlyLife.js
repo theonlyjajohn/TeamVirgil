@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from 'react-player';
 import { useNavigate } from "react-router-dom";
-import MargaretThompsonLarge from "../images/m-thompson-large.png";
-import IthacaImage from "../images/ithaca.jpg";
-import ChildrenPlaying from "../images/playing.jpg";
+// import MargaretThompsonLarge from "../images/m-thompson-large.png";
+// import IthacaImage from "../images/ithaca.jpg";
+// import ChildrenPlaying from "../images/playing.jpg";
 import Chapter1Video from "../images/chapter1.mp4";
-import theaterAndDramaticsBig from "../images/theater-and-dramatics-big.png";
+// import theaterAndDramaticsBig from "../images/theater-and-dramatics-big.png";
 import ballet1 from "../images/ballet1.png";
 import ballet2 from "../images/ballet2.png";
 import theaterAndDramatics from "../images/theater-and-dramatics.png";
@@ -28,7 +28,7 @@ const EarlyLife = () => {
   const [isWritingAndGrammarOpen, setIsWritingAndGrammarOpen] = useState(false);
   const [isTheaterOpen, setIsTheaterOpen] = useState(false);
 
-  const [selectedValue, setSelectedValue] = useState("Ballet Classes");
+  // const [selectedValue, setSelectedValue] = useState("Ballet Classes");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -36,10 +36,10 @@ const EarlyLife = () => {
     setIsWritingAndGrammarOpen(!isWritingAndGrammarOpen);
   const toggleDropdownTheater = () => setIsTheaterOpen(!isTheaterOpen);
 
-  const handleOptionClick = (value) => {
-    setSelectedValue(value);
-    setIsOpen(false);
-  };
+  // const handleOptionClick = (value) => {
+  //   setSelectedValue(value);
+  //   setIsOpen(false);
+  // };
 
   const headingRef = useRef(null);
   const navigate = useNavigate();
