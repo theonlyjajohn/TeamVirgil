@@ -303,21 +303,30 @@ function Home() {
                         Virgil Vault — an interactive archive that merges their
                         voice with photos, videos, and more
                       </li>
+                      <br></br>
                       <li>
                         10 hours of conversational interviews — enough to
                         capture their entire life story!
                       </li>
+                      <br></br>
                       <li>High-fidelity audio and video recordings</li>
+                      <br></br>
 
                       <li>
                         Searchable video library to easily find specific
                         memories
                       </li>
+                      <br></br>
+
                       <li>
                         A personal historian who will guide your family through
                         the entire process
                       </li>
+                      <br></br>
+
                       <li>Safe, secure, and private to you and your family</li>
+                      <br></br>
+
                       <li>Shareable and downloadable</li>
                     </ul>
                     <br></br>
@@ -405,6 +414,12 @@ function Home() {
                     <button type="submit" className="waitlist-button">
                       Join Our Waitlist
                     </button>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <span> Questions? Feel free to send us a message! </span>
+                    <p><a href="mailto: contact@virgil.bio">contact@virgil.bio</a></p>
                   </form>
                 </div>
               </div>

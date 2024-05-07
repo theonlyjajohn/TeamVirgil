@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+import ReactPlayer from 'react-player';
 import { useNavigate } from "react-router-dom";
-import MargaretThompsonLarge from "../images/m-thompson-large.png";
-import IthacaImage from "../images/ithaca.jpg";
-import ChildrenPlaying from "../images/playing.jpg";
-import theaterAndDramaticsBig from "../images/theater-and-dramatics-big.png";
+// import MargaretThompsonLarge from "../images/m-thompson-large.png";
+// import IthacaImage from "../images/ithaca.jpg";
+// import ChildrenPlaying from "../images/playing.jpg";
+import Chapter1Video from "../images/chapter1.mp4";
+// import theaterAndDramaticsBig from "../images/theater-and-dramatics-big.png";
 import ballet1 from "../images/ballet1.png";
 import ballet2 from "../images/ballet2.png";
 import theaterAndDramatics from "../images/theater-and-dramatics.png";
@@ -17,6 +19,7 @@ import makeupClasses from "../images/makeup-classes-on-fifth-avenue.png";
 import iceCream from "../images/ice-cream-at-addie-valens.png";
 import myContentedFather from "../images/my-contented-father.png";
 import grewUpInLincolnPark from "../images/grew-up-in-lincoln-park.png";
+import footerVideo from "../images/chapter1_bottom.mov";
 
 import "./IndividualDemoPage.css";
 
@@ -25,7 +28,7 @@ const EarlyLife = () => {
   const [isWritingAndGrammarOpen, setIsWritingAndGrammarOpen] = useState(false);
   const [isTheaterOpen, setIsTheaterOpen] = useState(false);
 
-  const [selectedValue, setSelectedValue] = useState("Ballet Classes");
+  // const [selectedValue, setSelectedValue] = useState("Ballet Classes");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -33,10 +36,10 @@ const EarlyLife = () => {
     setIsWritingAndGrammarOpen(!isWritingAndGrammarOpen);
   const toggleDropdownTheater = () => setIsTheaterOpen(!isTheaterOpen);
 
-  const handleOptionClick = (value) => {
-    setSelectedValue(value);
-    setIsOpen(false);
-  };
+  // const handleOptionClick = (value) => {
+  //   setSelectedValue(value);
+  //   setIsOpen(false);
+  // };
 
   const headingRef = useRef(null);
   const navigate = useNavigate();
@@ -131,21 +134,19 @@ const EarlyLife = () => {
               style={{ maxWidth: "1120px", margin: "0 auto" }}
             >
               <div class="video-container">
-                <iframe
-                  title="youtube"
-                  width="1120"
-                  height="630"
-                  src="https://www.youtube.com/embed/jkn9HcVPJJE?start=13&autoplay=1&mute=0"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <ReactPlayer
+                  className='react-player fixed-bottom'
+                  url={Chapter1Video}
+                  width='100%'
+                  height='80%'
+                  controls={true}
+                />
               </div>
               <div className="family-container">
                 <div className="family-heading">Family Background</div>
                 <div className="family-content">
                   Betty grew up in Lincoln Park, a suburb of Yonkers. She was an
-                  only child with a Ukrainian father who adored American and an
+                  only child with a Ukrainian father who adored America and an
                   ambitious mother who was always striving for more
                 </div>
               </div>
@@ -362,15 +363,13 @@ const EarlyLife = () => {
               </div>
 
               <div class="video-container">
-                <iframe
-                  title="youtube"
-                  width="1120"
-                  height="630"
-                  src="https://www.youtube.com/embed/jkn9HcVPJJE?start=13&autoplay=1&mute=0"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <ReactPlayer
+                    className='react-player fixed-bottom'
+                    url={footerVideo}
+                    width='100%'
+                    height='80%'
+                    controls={true}
+                  />
                 <div className="video-description">
                   Video uploaded by Aunt Deborah Edwards.
                 </div>
