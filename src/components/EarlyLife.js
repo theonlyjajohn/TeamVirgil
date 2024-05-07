@@ -1,115 +1,75 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from 'react-player';
 import { useNavigate } from "react-router-dom";
-// import CarouselCard from "./CarouselCard";
-// import MargaretThompson from "../images/margaret-thompson.png";
-// import CollegeLife from "../images/college-life.png";
 import MargaretThompsonLarge from "../images/m-thompson-large.png";
-// import CareerAndCommunity from "../images/career-and-community.png";
 import IthacaImage from "../images/ithaca.jpg";
 import ChildrenPlaying from "../images/playing.jpg";
+<<<<<<< HEAD
 import Chapter1Video from "../images/chapter1.mp4";
+=======
+import ballet1 from "../images/ballet1.png";
+import ballet2 from "../images/ballet2.png";
+import "react-multi-carousel/lib/styles.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import myAmbitiousMother from "../images/my-ambitious-mother.png";
+import makeupClasses from "../images/makeup-classes-on-fifth-avenue.png";
+import iceCream from "../images/ice-cream-at-addie-valens.png";
+import myContentedFather from "../images/my-contented-father.png";
+import grewUpInLincolnPark from "../images/grew-up-in-lincoln-park.png";
+>>>>>>> a92b462b2482564f291088d58ba1a7d3762ac80c
 
 import "./IndividualDemoPage.css";
 
 const EarlyLife = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedValue, setSelectedValue] = useState("Ballet Classes");
+
+  const toggleDropdown = () => setIsOpen(!isOpen);
+  const handleOptionClick = (value) => {
+    setSelectedValue(value);
+    setIsOpen(false);
+  };
+
   const headingRef = useRef(null);
   const navigate = useNavigate();
 
   const goToWaitList = () => {
     navigate("/home#waitlist");
-    // Any other actions that do not depend on navigation completion
   };
 
-  // const navigate = useNavigate();
+  function SampleNextArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={className} style={{ ...styling }} onClick={onClick} />
+    );
+  }
 
-  // const goToHome = () => {
-  //   navigate("/home");
-  // };
+  const SamplePrevArrow2 = (props) => {
+    const { className, onClick } = props;
+    return (
+      <div className={className} onClick={onClick} style={{ ...styling }}>
+        hello
+      </div>
+    );
+  };
 
-  // function SampleNextArrow(props) {
-  //   const { className, onClick } = props;
-  //   return (
-  //     <div className={className} style={{ ...styling }} onClick={onClick} />
-  //   );
-  // }
+  const styling = {
+    color: "black",
+  };
 
-  // const SamplePrevArrow2 = (props) => {
-  //   const { className, onClick } = props;
-  //   return (
-  //     <div className={className} onClick={onClick} style={{ ...styling }}>
-  //       hello
-  //     </div>
-  //   );
-  // };
-
-  // const styling = {
-  //   color: "black",
-  // };
-
-  // const settings = {
-  //   initialSlide: 1,
-  //   centerMode: true,
-  //   infinite: false,
-  //   centerPadding: "60px",
-  //   slidesToShow: 3,
-  //   speed: 500,
-  //   arrows: true,
-  //   nextArrow: <SampleNextArrow />,
-  //   prevArrow: <SamplePrevArrow2 />,
-  //   beforeChange: (current, next) => setActiveIndex(next), // Update active index on slide change
-  // };
-
-  // const items = [
-  //   {
-  //     id: 0,
-  //     imageUrl: "",
-  //     years: "",
-  //     title: "",
-  //     features: [],
-  //   },
-  //   {
-  //     id: 1,
-  //     imageUrl: EarlyLife,
-  //     years: "1938-1956",
-  //     title: "Early Life in Ithaca",
-  //     features: ["My brother", "Playing in the woods", "Family values"],
-  //   },
-  //   {
-  //     id: 2,
-  //     imageUrl: CollegeLife,
-  //     years: "1957-1961",
-  //     title: "College Years",
-  //     features: [
-  //       "Studying English Literature",
-  //       "Sorority life",
-  //       "First relationship",
-  //     ],
-  //   },
-  //   {
-  //     id: 3,
-  //     imageUrl: CareerAndCommunity,
-  //     years: "1961-1970",
-  //     title: "Career & Community",
-  //     features: ["Teaching high school", "Volunteering with gardening"],
-  //   },
-  //   {
-  //     id: 4,
-  //     imageUrl: "",
-  //     years: "",
-  //     title: "",
-  //     features: [],
-  //   },
-  //   {
-  //     id: 0,
-  //     imageUrl: "",
-  //     years: "",
-  //     title: "",
-  //     features: [],
-  //   },
-  // ];
-
-  // const [activeIndex, setActiveIndex] = useState(1);
+  const settings = {
+    initialSlide: 1,
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow2 />,
+  };
 
   const [deviceType, setDeviceType] = useState("desktop");
 
@@ -136,38 +96,6 @@ const EarlyLife = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [deviceType]);
-
-  // const responsive = {
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 3,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 2,
-  //     slidesToSlide: 2,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //     slidesToSlide: 1,
-  //   },
-  // };
-
-  const styles = {
-    banner: {
-      background:
-        "linear-gradient(to right, #FEE2C3, #F6C062)" /* Adjust the colors as needed */,
-      padding: "20px 60px",
-      fontFamily: "Poppins, sans-serif",
-      textAlign: "center",
-    },
-    link: {
-      textDecoration: "none",
-      color: "black",
-      borderBottom: "2px solid black",
-    },
-  };
 
   return (
     <div className="homepage">
@@ -213,6 +141,53 @@ const EarlyLife = () => {
                   ambitious mother who was always striving for more
                 </div>
               </div>
+              <div className="carousel-container">
+                <div
+                  style={{
+                    width: "80%",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <Slider {...settings}>
+                    <div>
+                      <img
+                        src={myAmbitiousMother}
+                        alt="my ambitious mother"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src={grewUpInLincolnPark}
+                        alt="children"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src={myContentedFather}
+                        alt="children"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src={makeupClasses}
+                        alt="my ambitious mother"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src={iceCream}
+                        alt="my ambitious mother"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                  </Slider>
+                </div>
+              </div>
               {/* Flex container for images */}
               <div
                 className="images-container"
@@ -221,39 +196,133 @@ const EarlyLife = () => {
                   justifyContent: "space-between",
                   marginTop: "20px",
                 }}
-              >
-                <div className="photo-container">
-                  <img
-                    src={MargaretThompsonLarge}
-                    alt="first"
-                    style={{ width: "80%", height: "auto" }}
-                  />
-                  <figcaption style={{ textAlign: "center" }}>
-                    Betty's High School Photo, uploaded by Aunt Catherine.
-                  </figcaption>
-                </div>
-                <div className="photo-container">
-                  <img
-                    src={ChildrenPlaying}
-                    alt="children"
-                    style={{ width: "80%", height: "auto" }}
-                  />
-                  <figcaption style={{ textAlign: "center" }}>
-                    Betty playing as a young girl.
-                  </figcaption>
-                </div>
-                <div className="photo-container">
-                  <img
-                    src={IthacaImage}
-                    alt="second"
-                    style={{ width: "99%", height: "auto" }}
-                  />
-                  <figcaption style={{ textAlign: "center" }}>
-                    1938 Postcard of Cornell University, in Ithaca.
-                  </figcaption>
+              ></div>
+              <div className="family-container">
+                <div className="family-heading">Mother's Influence</div>
+                <div className="family-content">
+                  Her mother was a significant influence, pushing her towards
+                  numerous educational and extracurricualr activities to ensure
+                  she had every possible advantage.
                 </div>
               </div>
-              <button onClick={goToWaitList} className="nav-link-waitlist">
+              <div>
+                <div className="dropdown">
+                  {!isOpen && (
+                    <button
+                      onClick={toggleDropdown}
+                      className="dropdown-toggle"
+                    >
+                      {selectedValue}{" "}
+                      <span className="arrow">{isOpen ? "▲" : "▼"}</span>
+                    </button>
+                  )}
+                  {isOpen && (
+                    <div>
+                      <div className="gray-box-chapter">
+                        <div className="inner-gray-box-chapter">
+                          <div className="gray-box-text-container">
+                            <div className="gray-box-header">
+                              {" "}
+                              Ballet Classes
+                            </div>
+                            <div className="gray-box-content">
+                              {" "}
+                              Every Saturday, I attended ballet class with a
+                              teacher who, as a Christian Scientist, ignored
+                              pain. There, I learned not just to dance but to
+                              embody discipline and grace under pressure.{" "}
+                            </div>
+                          </div>
+                          <div className="gray-box-image-container">
+                            <img src={ballet1} alt="Down arrow" />
+                            <img src={ballet2} alt="Down arrow" />
+                          </div>
+                        </div>
+                        <button
+                          onClick={toggleDropdown}
+                          className="dropdown-toggle"
+                        >
+                          {" "}
+                          ▲
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="inner-gray-box-chapter">
+                <div className="gray-box-text-container">
+                  <div className="gray-box-header"> Ballet Classes</div>
+                  <div className="gray-box-content">
+                    {" "}
+                    Every Saturday, I attended ballet class with a teacher who,
+                    as a Christian Scientist, ignored pain. There, I learned not
+                    just to dance but to embody discipline and grace under
+                    pressure.{" "}
+                  </div>
+                </div>
+                <div className="gray-box-image-container">
+                  <img src={ballet1} alt="Down arrow" />
+                  <img src={ballet2} alt="Down arrow" />
+                </div>
+              </div>
+              <div className="inner-gray-box-chapter">
+                <div className="gray-box-text-container">
+                  <div className="gray-box-header"> Theater and Dramatics</div>
+                  <div className="gray-box-content">
+                    {" "}
+                    In her dramatics class, Betty learned to express herself
+                    through speaking and acting. Her journey toward becoming a
+                    professional was gently steered away by her mother, who
+                    wanted these experiences to enrich her life rather than
+                    transform her into a stage child.{" "}
+                  </div>
+                </div>
+                <div className="gray-box-image-container">
+                  <img src={ballet1} alt="Down arrow" />
+                  <img src={ballet2} alt="Down arrow" />
+                </div>
+              </div>
+              <div className="inner-gray-box-chapter">
+                <div className="gray-box-text-container">
+                  <div className="gray-box-header"> Writing and Grammar</div>
+                  <div className="gray-box-content">
+                    {" "}
+                    Under the strict but nurturing guidance of seasoned editors,
+                    she learned to refine her voice and embrace the
+                    vulnerability in her storytelling.{" "}
+                  </div>
+                </div>
+                <div className="gray-box-image-container">
+                  <img src={ballet1} alt="Down arrow" />
+                  <img src={ballet2} alt="Down arrow" />
+                </div>
+              </div>
+              <div className="remarkable-mother-container">
+                <div className="remarkable-mother-content">
+                  The remarkable thing about my mother was that, on top of all
+                  that push, she was a kind, loving person. She cared about
+                  others, so I learned to be someone who is interested in and
+                  cares about other people. I got that from her.
+                </div>
+              </div>
+
+              <div class="video-container">
+                <iframe
+                  title="youtube"
+                  width="1120"
+                  height="630"
+                  src="https://www.youtube.com/embed/jkn9HcVPJJE?start=13&autoplay=1&mute=0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <button
+                onClick={goToWaitList}
+                className="nav-link-waitlist"
+                style={{ marginBottom: "30px" }}
+              >
                 Back to life chapters
               </button>
             </div>
