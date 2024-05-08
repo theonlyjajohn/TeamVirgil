@@ -235,62 +235,13 @@ const Demo = () => {
 
   return (
     <div className="homepage">
-      <header className="header">
-        <nav className="navbar" ref={headingRef}>
-          <ul className="nav-list">
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Palatino Linotype, serif",
-                fontWeight: "bold",
-                fontSize: "32px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
-              Virgil
-            </button>
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Open Sans, sans-serif",
-                fontSize: "20px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
-              How it Works
-            </button>
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Open Sans, sans-serif",
-                fontSize: "20px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
-              What's Included
-            </button>
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Open Sans, sans-serif",
-                fontSize: "20px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
-              Explore Demo
-            </button>
-          </ul>
-          <ul className="nav-waitlist">
-            <button onClick={goToWaitList} className="nav-link-waitlist">
-              Join Waitlist
-            </button>
-          </ul>
-        </nav>
-      </header>
+      <div className="banner" ref={headingRef}>
+        You're viewing a demo of our digital memoir feature.{" "}
+        <a href="/" className="link">
+          Return to main site
+        </a>{" "}
+        to start your own journey.
+      </div>
       <main className="main-content">
         <div className="overall-heading-container">
           <div className="heading-text-container">
