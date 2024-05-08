@@ -23,15 +23,6 @@ const Demo = () => {
 
   const navigate = useNavigate();
 
-  const goToHome = () => {
-    navigate("/home");
-  };
-
-  const goToWaitList = () => {
-    navigate("/home#waitlist");
-    // Any other actions that do not depend on navigation completion
-  };
-
   function SampleNextArrow(props) {
     const { className, onClick } = props;
     return (
