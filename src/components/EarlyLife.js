@@ -147,7 +147,7 @@ const EarlyLife = () => {
                 <div className="family-content">
                   Betty grew up in Lincoln Park, a suburb of Yonkers. She was an
                   only child with a Ukrainian father who adored America and an
-                  ambitious mother who was always striving for more
+                  ambitious mother who was always striving for more.
                 </div>
               </div>
               <div className="carousel-container">
@@ -210,7 +210,7 @@ const EarlyLife = () => {
                 <div className="family-heading">Mother's Influence</div>
                 <div className="family-content">
                   Her mother was a significant influence, pushing her towards
-                  numerous educational and extracurricualr activities to ensure
+                  numerous educational and extracurricular activities to ensure
                   she had every possible advantage.
                 </div>
               </div>
@@ -236,9 +236,9 @@ const EarlyLife = () => {
                             </div>
                             <div className="gray-box-content">
                               {" "}
-                              Every Saturday, I attended ballet class with a
+                              Every Saturday, Betty attended ballet class with a
                               teacher who, as a Christian Scientist, ignored
-                              pain. There, I learned not just to dance but to
+                              pain. There, she learned not just to dance but to
                               embody discipline and grace under pressure.{" "}
                             </div>
                           </div>
@@ -332,7 +332,7 @@ const EarlyLife = () => {
                               Under the strict but nurturing guidance of
                               seasoned editors, she learned to refine her voice
                               and embrace the vulnerability in her
-                              storytelling..{" "}
+                              storytelling.{" "}
                             </div>
                           </div>
                           <div className="gray-box-image-container">
@@ -379,7 +379,7 @@ const EarlyLife = () => {
                 className="nav-link-waitlist"
                 style={{ margin: "50px 30px" }}
               >
-                Back to life chapters
+                Back to Life Chapters
               </button>
             </div>
           </div>
